@@ -1,0 +1,12 @@
+{
+  "name": "08.08 · Архитектура сознания",
+  "short_name": "08.08",
+  "icons": [
+    { "src": "favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#16241D",
+  "background_color": "#FAFBF8",
+  "display": "standalone"
+}

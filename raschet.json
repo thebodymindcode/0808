@@ -1,0 +1,107 @@
+{
+  "blocks": [
+    {
+      "num": "01",
+      "word": "Шум",
+      "old": 4480,
+      "new": 2690,
+      "save": 1790,
+      "pct": 40,
+      "items": [
+        "protocol",
+        "choice"
+      ]
+    },
+    {
+      "num": "02",
+      "word": "Тело",
+      "old": 5970,
+      "new": 3580,
+      "save": 2390,
+      "pct": 40,
+      "items": [
+        "beyond",
+        "beauty",
+        "protocol"
+      ]
+    },
+    {
+      "num": "03",
+      "word": "Разрешение",
+      "old": 6390,
+      "new": 3830,
+      "save": 2560,
+      "pct": 40,
+      "items": [
+        "authority",
+        "choice"
+      ]
+    },
+    {
+      "num": "04",
+      "word": "Потолок",
+      "old": 7890,
+      "new": 4730,
+      "save": 3160,
+      "pct": 40,
+      "items": [
+        "biohim",
+        "money"
+      ]
+    },
+    {
+      "num": "05",
+      "word": "Январь",
+      "old": 8470,
+      "new": 5080,
+      "save": 3390,
+      "pct": 40,
+      "items": [
+        "newyear",
+        "protocol",
+        "choice"
+      ]
+    },
+    {
+      "num": "06",
+      "word": "Сценарий",
+      "old": 9370,
+      "new": 5620,
+      "save": 3750,
+      "pct": 40,
+      "items": [
+        "beauty",
+        "beyond",
+        "authority",
+        "choice"
+      ]
+    }
+  ],
+  "flagship": {
+    "old": 24240,
+    "new": 14540,
+    "save": 9700
+  },
+  "session": {
+    "old": 15000,
+    "new": 10500
+  },
+  "money_key": {
+    "old": 22890,
+    "new": 13900
+  },
+  "all_key": {
+    "old": 39240,
+    "new": 23900
+  },
+  "presale": {
+    "dostup": [
+      3500,
+      2800
+    ],
+    "polny": [
+      9900,
+      7900
+    ]
+  }
+}

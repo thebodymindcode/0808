@@ -766,6 +766,52 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 .quiz-res-btn:hover{background:var(--sage-dark)}
 .quiz-res-btn svg{width:17px;height:17px}
 .vip-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* секция «Почему восьмёрка» */
+.eight-wrap{max-width:1180px;margin:0 auto;padding:56px 24px 0}
+.eight{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:22px;padding:34px 34px 30px;box-shadow:0 4px 30px rgba(59,122,90,.05)}
+.eight-art{background:var(--sage-pale);border-radius:18px;padding:18px 10px}
+.eight-art svg{width:100%;height:auto;display:block}
+.e8-run{animation:e8run 5s linear infinite}
+@keyframes e8run{to{stroke-dashoffset:-660}}
+.eight-txt h2{font-size:clamp(1.4rem,3vw,2.05rem);font-weight:800;letter-spacing:-.035em;line-height:1.15;margin:8px 0 12px}
+.eight-txt>p{color:var(--text2);font-size:1rem;line-height:1.65}
+.eight-steps{list-style:none;counter-reset:e8;display:flex;flex-direction:column;gap:11px;margin:18px 0 0}
+.eight-steps li{position:relative;padding-left:40px;font-size:.95rem;line-height:1.55;color:var(--text2)}
+.eight-steps li b{color:var(--text)}
+.eight-steps li:before{counter-increment:e8;content:counter(e8);position:absolute;left:0;top:1px;width:27px;height:27px;border-radius:9px;background:var(--sage-light);color:var(--sage-dark);font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.eight-foot{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:.92rem;color:var(--text3)}
+/* тест: подписи и результат-конструктор */
+.qz-body{display:flex;flex-direction:column;gap:2px;min-width:0}
+.qz-tag{font-size:.72rem;font-weight:700;letter-spacing:.03em;color:var(--text3)}
+.qz.on{border-color:var(--sage);background:var(--sage-pale)}
+.qz.on .qz-tag{color:var(--sage)}
+.qz.on .qz-text{color:var(--sage-dark);font-weight:600}
+.qr-head{font-size:1.05rem;font-weight:700;margin-bottom:14px;text-align:center}
+.qr-head b{color:var(--sage-dark)}
+.qr-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.qr-row{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:13px;padding:12px 14px;text-decoration:none;color:inherit;transition:.16s}
+.qr-row:hover{border-color:var(--sage)}
+.qr-row-n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--sage);color:#fff;font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.qr-row-name{flex:1;display:flex;flex-direction:column;align-items:flex-start;text-align:left;font-weight:700;font-size:.97rem;min-width:0}
+.qr-row-name em{font-style:normal;font-weight:500;font-size:.79rem;color:var(--text3)}
+.qr-row-p{text-align:right;display:flex;flex-direction:column;line-height:1.2}
+.qr-row-p s{font-size:.76rem;color:var(--text3)}
+.qr-row-p b{font-size:1.02rem;font-weight:800}
+.qr-sum{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px dashed rgba(59,122,90,.35);border-radius:13px;padding:13px 16px}
+.qr-sum-l{font-size:.86rem;font-weight:600;color:var(--text2)}
+.qr-sum-v{display:flex;align-items:baseline;gap:10px}
+.qr-old{font-size:.86rem;color:var(--text3);text-decoration:line-through}
+.qr-new{font-size:1.3rem;font-weight:800;letter-spacing:-.03em}
+.qr-note{margin-top:12px;background:var(--gold-pale);border:1px solid rgba(196,154,82,.4);border-radius:13px;padding:13px 16px;font-size:.9rem;line-height:1.5;color:#7A5A20}
+.qr-adv{margin-top:14px;font-size:.96rem;line-height:1.55;color:var(--text2)}
+.qr-adv b{color:var(--text)}
+.qr-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+.qr-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--sage);color:#fff;font-weight:700;font-size:.93rem;padding:13px 20px;border-radius:12px;text-decoration:none;transition:.16s}
+.qr-btn:hover{background:var(--sage-dark)}
+.qr-btn.gold{background:var(--gold)}
+.qr-btn.gold:hover{background:#B0863F}
+.qr-btn.ghost{background:#fff;color:var(--sage-dark);border:1.5px solid var(--sage)}
+.qr-btn.ghost:hover{background:var(--sage-pale)}
 .pre-wrap{max-width:1180px;margin:0 auto;padding:20px 24px 40px}
 .pre{background:#fff;border:1px solid var(--border);border-radius:24px;padding:40px 36px;position:relative;overflow:hidden}
 .pre:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--sage),var(--gold))}
@@ -795,7 +841,13 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   .vip-grid.three{grid-template-columns:1fr}
   .pre-grid{grid-template-columns:1fr}
 }
+@media(max-width:900px){.eight{grid-template-columns:1fr;padding:24px 20px}}
 @media(max-width:768px){
+  .eight-wrap{padding:36px 16px 0}
+  .qr-sum{flex-direction:column;align-items:flex-start;gap:6px}
+  .qr-row-name{white-space:nowrap}
+  .qr-row{gap:9px;padding:11px 12px}
+  .qr-btn{width:100%}
   .quiz-wrap{padding:36px 16px 0}
   .quiz{padding:26px 18px;border-radius:18px}
   .quiz-grid{grid-template-columns:1fr}
@@ -841,25 +893,15 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <div class="hero-deco-1"></div>
 <div class="hero-deco-2"></div>
 
-<!-- DECORATIVE: spiral leaf growth, top left -->
+<!-- DECOR: лемниската -->
 <div class="hero-deco-svg">
-  <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#3B7A5A" stroke-width="1.5" stroke-linecap="round">
-    <!-- Spiral -->
-    <path d="M140 140 m-60 0 a60 60 0 1 0 120 0 a60 60 0 1 0 -120 0" opacity=".25"/>
-    <path d="M140 140 m-90 0 a90 90 0 1 0 180 0 a90 90 0 1 0 -180 0" opacity=".15"/>
-    <path d="M140 140 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0" opacity=".08"/>
-    <!-- Growing branch -->
-    <path d="M140 220 Q 140 180 130 150 Q 120 120 140 90 Q 160 60 140 30" stroke-width="2"/>
-    <!-- Leaves -->
-    <path d="M130 150 Q 110 145 100 130 Q 110 135 130 150" fill="#3B7A5A" opacity=".4"/>
-    <path d="M140 90 Q 165 95 175 75 Q 160 80 140 90" fill="#3B7A5A" opacity=".4"/>
-    <path d="M135 200 Q 115 195 105 180 Q 120 188 135 200" fill="#3B7A5A" opacity=".4"/>
-    <!-- Top circle -->
-    <circle cx="140" cy="30" r="6" fill="#C49A52"/>
-    <!-- Side dots -->
-    <circle cx="100" cy="130" r="3" fill="#3B7A5A"/>
-    <circle cx="175" cy="75" r="3" fill="#3B7A5A"/>
-    <circle cx="105" cy="180" r="2.5" fill="#C49A52"/>
+  <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#3B7A5A" stroke-width="1.6" stroke-linecap="round">
+    <path d="M140 100C110 45 30 45 30 100s80 55 110 0c30-55 110-55 110 0s-80 55-110 0z" opacity=".28"/>
+    <path d="M140 100C110 45 30 45 30 100s80 55 110 0" stroke-width="2.4" opacity=".5"/>
+    <path d="M140 100c22-40 66-48 96-62" stroke-width="2.4" opacity=".5"/>
+    <path d="M225 26l14-8 3 15" stroke-width="2.2" opacity=".6"/>
+    <circle cx="140" cy="100" r="4" fill="#C49A52"/>
+    <circle cx="30" cy="100" r="2.5" fill="#3B7A5A" opacity=".5"/>
   </svg>
 </div>
 
@@ -961,7 +1003,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <a href="#flagship" class="hs-row gold-row">
           <div class="hs-name">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l3 12h14l3-12-6 5-4-7-4 7-6-5z"/></svg>
-            07 · Все восемь · флагман
+            Флагман · Все восемь
           </div>
           <div class="hs-disc">−40% · 14 540 ₽</div>
         </a>
@@ -981,6 +1023,46 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 </div>
 
 
+<!-- ═══ ВОСЬМЁРКА: сама идея ═══ -->
+<section class="eight-wrap reveal" id="ideya">
+  <div class="eight">
+    <div class="eight-art">
+      <svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <defs>
+          <linearGradient id="e8g" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3B7A5A"/><stop offset="100%" stop-color="#C49A52"/>
+          </linearGradient>
+        </defs>
+        <path d="M210 120C170 44 44 50 44 120s126 76 166 0c40-76 166-70 166 0s-126 76-166 0z" stroke="#3B7A5A" stroke-width="1.6" opacity=".18"/>
+        <path d="M210 120C170 44 44 50 44 120s126 76 166 0" stroke="#3B7A5A" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M210 120C170 44 44 50 44 120s126 76 166 0" stroke="#fff" stroke-width="3.6" stroke-linecap="round" opacity=".9" stroke-dasharray="10 320" class="e8-run"/>
+        <path d="M210 120c34-62 96-86 168-108" stroke="url(#e8g)" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M352 6l30 6 -8 29" stroke="#C49A52" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="44" cy="120" r="4" fill="#3B7A5A" opacity=".45"/>
+        <circle cx="210" cy="120" r="26" fill="#fff" stroke="#C49A52" stroke-width="1.6"/>
+        <text x="210" y="126" text-anchor="middle" font-family="Inter" font-weight="800" font-size="15" fill="#111" letter-spacing="-0.5">08.08</text>
+        <circle r="6" fill="#3B7A5A">
+          <animateMotion dur="5s" repeatCount="indefinite" path="M210 120C170 44 44 50 44 120s126 76 166 0"/>
+        </circle>
+        <text x="112" y="216" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#3B7A5A" letter-spacing="1.4">ИДЁТ ПО КРУГУ</text>
+        <text x="330" y="70" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#C49A52" letter-spacing="1.4">ВЫХОД</text>
+      </svg>
+    </div>
+    <div class="eight-txt">
+      <div class="sec-tag">Почему восьмёрка</div>
+      <h2>Круг это то, что <span class="sage">повторяется само.</span></h2>
+      <p>Положите восьмёрку на бок, и получится замкнутая линия. По ней удобно ходить годами и называть это характером.</p>
+      <ol class="eight-steps">
+        <li><b>Левая петля.</b> То, что возвращается: мысль в три ночи, жалоба тела, одна и та же цифра дохода, знакомый сценарий с людьми.</li>
+        <li><b>Разрыв.</b> Момент, где механизм становится видно. Дальше линию ведёте вы.</li>
+        <li><b>Правая петля.</b> Куда всё это идёт, когда больше ничего не заворачивает назад.</li>
+      </ol>
+      <div class="eight-foot">Ниже шесть таких кругов. Отметьте свои в тесте, и мы покажем, что брать.</div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ ТЕСТ: КАКОЙ У ВАС КРУГ ═══ -->
 <section class="quiz-wrap reveal" id="quiz">
   <div class="quiz">
@@ -993,49 +1075,77 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <label class="qz">
         <input type="checkbox" data-b="b1">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Мысли не выключаются даже ночью</span>
+        <span class="qz-body">
+          <span class="qz-text">Мысли не выключаются даже ночью</span>
+          <span class="qz-tag">Круг шума</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b2">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Тело сигналит, а обследования чистые</span>
+        <span class="qz-body">
+          <span class="qz-text">Тело сигналит, а обследования чистые</span>
+          <span class="qz-tag">Круг тела</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b3">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Сначала спрашиваю мнение, потом решаю</span>
+        <span class="qz-body">
+          <span class="qz-text">Сначала спрашиваю мнение, потом решаю</span>
+          <span class="qz-tag">Круг разрешения</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b4">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Доход упирается в одну и ту же цифру</span>
+        <span class="qz-body">
+          <span class="qz-text">Доход упирается в одну и ту же цифру</span>
+          <span class="qz-tag">Круг потолка</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b5">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Каждый январь обещаю себе одно и то же</span>
+        <span class="qz-body">
+          <span class="qz-text">Каждый январь обещаю себе одно и то же</span>
+          <span class="qz-tag">Круг января</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b6">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Истории повторяются, меняются только лица</span>
+        <span class="qz-body">
+          <span class="qz-text">Истории повторяются, меняются только лица</span>
+          <span class="qz-tag">Круг сценария</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b4">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Деньги приходят и утекают, будто есть предел</span>
+        <span class="qz-body">
+          <span class="qz-text">Деньги приходят и утекают, будто есть предел</span>
+          <span class="qz-tag">Круг потолка</span>
+        </span>
       </label>
       <label class="qz">
         <input type="checkbox" data-b="b3">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="qz-text">Соглашаюсь через силу, потом злюсь на себя</span>
+        <span class="qz-body">
+          <span class="qz-text">Соглашаюсь через силу, потом злюсь на себя</span>
+          <span class="qz-tag">Круг разрешения</span>
+        </span>
       </label>
     </div>
     <div class="quiz-res" hidden>
-      <div class="quiz-res-l">Похоже, ваш круг это</div>
-      <div class="quiz-res-n">Круг шума</div>
-      <div class="quiz-res-p">Блок 01, 2 690 ₽ вместо 4 480 ₽</div>
-      <a class="quiz-res-btn" href="#b1">Посмотреть блок<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="qr-head">Вы отметили <b class="qr-cnt"></b></div>
+      <div class="qr-list"></div>
+      <div class="qr-sum">
+        <div class="qr-sum-l">Если брать по отдельности</div>
+        <div class="qr-sum-v"><span class="qr-old"></span><b class="qr-new"></b></div>
+      </div>
+      <div class="qr-note" hidden></div>
+      <div class="qr-cta"></div>
     </div>
   </div>
 </section>
@@ -1086,7 +1196,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   <div class="sec-head reveal">
     <div class="sec-tag">Шесть кругов · скидка 40%</div>
     <h2>Шесть кругов. <span class="gold">Из каждого</span> <span class="sage">есть выход.</span></h2>
-    <p>Круг это то, что повторяется у человека годами и кажется характером. В каждом блоке первый материал показывает механизм, второй даёт систему, третий закрепляет. Выбирайте по своей истории, а не по цене: <strong>скидка везде одна, 40%</strong>.</p>
+    <p>Круг это то, что повторяется у человека годами и кажется характером. В каждом блоке первый материал показывает механизм, второй даёт систему, третий закрепляет. Выбирайте по своей истории: <strong>скидка везде одна, 40%</strong>.</p>
   </div>
 
   <div class="b-grid">
@@ -1582,7 +1692,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <g transform="translate(28,30)">
             <path d="M0 12 L4 0 L10 8 L16 -2 L22 8 L28 0 L32 12 Z" fill="#C49A52"/>
           </g>
-          <text x="80" y="42" font-family="Inter" font-weight="800" font-size="13" fill="#C49A52" letter-spacing="1">07 · ВСЕ ВОСЕМЬ · ФЛАГМАН</text>
+          <text x="80" y="42" font-family="Inter" font-weight="800" font-size="13" fill="#C49A52" letter-spacing="1">ФЛАГМАН · ВСЕ ВОСЕМЬ</text>
           <text x="80" y="62" font-family="Inter" font-weight="500" font-size="10" fill="#555">Восемь продуктов проекта в одной цене</text>
           <text x="80" y="80" font-family="Inter" font-weight="500" font-size="9" fill="#999" text-decoration="line-through">24 240 ₽</text>
           <text x="572" y="56" text-anchor="end" font-family="Inter" font-weight="800" font-size="22" fill="#111" letter-spacing="-0.5">14 540 ₽</text>
@@ -1605,7 +1715,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       Флагман распродажи
     </div>
     <div class="fl-left">
-      <div class="fl-tag">07 · Все восемь · скидка 40%</div>
+      <div class="fl-tag">Флагман · Все восемь продуктов · скидка 40%</div>
       <h3>Все восемь продуктов.<br><span class="gold">Все круги сразу.</span></h3>
       <p class="fl-desc">Восьмого августа восемь продуктов проекта сходятся в одну цену. Если узнали себя больше чем в одном круге, это самый спокойный вариант: берёте всё и разбираетесь по порядку.</p>
 
@@ -2231,24 +2341,79 @@ const SUPPORT = 'https://t.me/TheBodyMindCode_support';
   }
 })();
 
-/* тест «какой у вас круг» */
-const QB = {"b1": ["Круг шума", "Блок 01, 2 690 ₽ вместо 4 480 ₽"], "b2": ["Круг тела", "Блок 02, 3 580 ₽ вместо 5 970 ₽"], "b3": ["Круг разрешения", "Блок 03, 3 830 ₽ вместо 6 390 ₽"], "b4": ["Круг потолка", "Блок 04, 4 730 ₽ вместо 7 890 ₽"], "b5": ["Круг января", "Блок 05, 5 080 ₽ вместо 8 470 ₽"], "b6": ["Круг сценария", "Блок 06, 5 620 ₽ вместо 9 370 ₽"]};
+/* тест-конструктор: складываем выбранные круги */
+const CIRCLES = {"b1": {"num": "01", "name": "Круг шума", "price": 2690, "old": 4480, "items": ["Протокол остановки ума", "Выбор"]}, "b2": {"num": "02", "name": "Круг тела", "price": 3580, "old": 5970, "items": ["За пределами заболеваний", "Красота без оправданий", "Протокол остановки ума"]}, "b3": {"num": "03", "name": "Круг разрешения", "price": 3830, "old": 6390, "items": ["Внутренний Авторитет", "Выбор"]}, "b4": {"num": "04", "name": "Круг потолка", "price": 4730, "old": 7890, "items": ["Биохимия денег", "Код денег"]}, "b5": {"num": "05", "name": "Круг января", "price": 5080, "old": 8470, "items": ["Код нового года", "Протокол остановки ума", "Выбор"]}, "b6": {"num": "06", "name": "Круг сценария", "price": 5620, "old": 9370, "items": ["Красота без оправданий", "За пределами заболеваний", "Внутренний Авторитет", "Выбор"]}};
+const FLAG = {price: 14540, old: 24240, count: 8};
+const money = n => n.toLocaleString('ru-RU').replace(/\u00A0/g, ' ') + ' \u20BD';
+const plural = (n, a, b, c) => {
+  const n10 = n % 10, n100 = n % 100;
+  if (n10 === 1 && n100 !== 11) return a;
+  if (n10 >= 2 && n10 <= 4 && (n100 < 10 || n100 >= 20)) return b;
+  return c;
+};
 (function(){
   const res = document.querySelector('.quiz-res');
   if (!res) return;
-  document.querySelectorAll('.qz input').forEach(inp => inp.addEventListener('change', () => {
-    const c = {};
+  const list = res.querySelector('.qr-list'), note = res.querySelector('.qr-note'), cta = res.querySelector('.qr-cta');
+  const payHref = k => ((typeof PAY !== 'undefined' && (PAY[k] || '').trim()) || SUPPORT);
+
+  function render(){
+    const keys = [];
     document.querySelectorAll('.qz input:checked').forEach(x => {
-      const k = x.dataset.b; c[k] = (c[k] || 0) + 1;
+      if (keys.indexOf(x.dataset.b) < 0) keys.push(x.dataset.b);
     });
-    const keys = Object.keys(c).sort((a, b) => c[b] - c[a]);
-    if (!keys.length) { res.hidden = true; return; }
-    const k = keys[0];
-    res.querySelector('.quiz-res-n').textContent = QB[k][0];
-    res.querySelector('.quiz-res-p').textContent = QB[k][1];
-    res.querySelector('.quiz-res-btn').setAttribute('href', '#' + k);
+    document.querySelectorAll('.qz').forEach(l => {
+      l.classList.toggle('on', l.querySelector('input').checked);
+    });
+    if (!keys.length){ res.hidden = true; return; }
+    keys.sort((a, b) => CIRCLES[a].num.localeCompare(CIRCLES[b].num));
+
+    const n = keys.length;
+    res.querySelector('.qr-cnt').textContent = n + ' ' + plural(n, 'круг', 'круга', 'кругов');
+
+    let sum = 0, sumOld = 0;
+    const seen = {}, dupes = [];
+    list.innerHTML = keys.map(k => {
+      const c = CIRCLES[k];
+      sum += c.price; sumOld += c.old;
+      c.items.forEach(it => { if (seen[it]) { if (dupes.indexOf(it) < 0) dupes.push(it); } else seen[it] = 1; });
+      return '<a class="qr-row" href="#' + k + '">' +
+        '<span class="qr-row-n">' + c.num + '</span>' +
+        '<span class="qr-row-name">' + c.name + '<em>' + c.items.length + ' ' + plural(c.items.length,'материал','материала','материалов') + '</em></span>' +
+        '<span class="qr-row-p"><s>' + money(c.old) + '</s><b>' + money(c.price) + '</b></span>' +
+        '</a>';
+    }).join('');
+
+    res.querySelector('.qr-old').textContent = money(sumOld);
+    res.querySelector('.qr-new').textContent = money(sum);
+
+    const takeAll = dupes.length > 0 || sum >= FLAG.price || n >= 4;
+    if (dupes.length){
+      note.hidden = false;
+      note.innerHTML = '<b>Тут есть повторы.</b> В выбранных кругах ' +
+        plural(dupes.length, 'встречается', 'встречаются', 'встречаются') + ' ' + dupes.join(', ') +
+        '. Дважды за одно и то же платить не нужно.';
+    } else note.hidden = true;
+
+    if (takeAll){
+      cta.innerHTML =
+        '<div class="qr-adv">Вам выгоднее взять <b>«Все восемь»</b> за ' + money(FLAG.price) +
+        ': это все восемь продуктов проекта, без повторов и без сборки из кусков.</div>' +
+        '<div class="qr-btns"><a class="qr-btn gold" href="' + payHref('flag') + '" target="_blank" rel="noopener">Взять все восемь за ' + money(FLAG.price) + '</a>' +
+        '<a class="qr-btn ghost" href="#blocks">Сначала посмотреть круги</a></div>';
+    } else {
+      const left = FLAG.price - sum;
+      cta.innerHTML =
+        '<div class="qr-adv">Берите ' + (n === 1 ? 'этот круг' : 'эти круги') + ' по отдельности, каждый оплачивается своей кнопкой. ' +
+        'До «Все восемь» остаётся ' + money(left) + ', а там ещё ' + (FLAG.count - Object.keys(seen).length) + ' ' +
+        plural(FLAG.count - Object.keys(seen).length, 'продукт', 'продукта', 'продуктов') + ' сверху.</div>' +
+        '<div class="qr-btns">' + keys.map(k =>
+          '<a class="qr-btn" href="' + payHref(k) + '" target="_blank" rel="noopener">' + CIRCLES[k].name + ' за ' + money(CIRCLES[k].price) + '</a>').join('') +
+        '<a class="qr-btn ghost" href="#flagship">Посмотреть «Все восемь»</a></div>';
+    }
     res.hidden = false;
-  }));
+  }
+  document.querySelectorAll('.qz input').forEach(i => i.addEventListener('change', render));
 })();
 
 // Reveal on scroll

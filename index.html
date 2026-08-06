@@ -7,8 +7,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="format-detection" content="telephone=no">
-<title>08.08 · Восьмёрка. Три дня, чтобы разомкнуть свой круг | Архитектура сознания</title>
-<meta name="description" content="8-10 августа 2026. Шесть кругов, восемь продуктов проекта, скидка 40%. Предпродажа Протокола денег.">
+<title>08.08 · Восьмёрка. Три дня, чтобы разорвать свой круг | Архитектура сознания</title>
+<meta name="description" content="8-10 августа 2026. Семь кругов, восемь продуктов проекта, скидка 40%. Предпродажа Протокола денег.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -766,6 +766,57 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 .quiz-res-btn:hover{background:var(--sage-dark)}
 .quiz-res-btn svg{width:17px;height:17px}
 .vip-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ═══ карта-восьмёрка в первом экране ═══ */
+.e8map{background:#fff;border:1px solid var(--border);border-radius:22px;padding:22px 20px 20px;box-shadow:0 6px 34px rgba(59,122,90,.08)}
+.e8map-title{display:flex;align-items:center;justify-content:space-between;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:6px}
+.e8map-title span{color:var(--gold);letter-spacing:.06em}
+.e8map-svg{width:100%;height:auto;display:block}
+.e8n{cursor:pointer}
+.e8n circle{transition:.18s}
+.e8n:hover circle{transform-box:fill-box;transform-origin:center;transform:scale(1.12)}
+.e8map-cap{font-size:.82rem;line-height:1.5;color:var(--text3);text-align:center;margin:2px 0 14px}
+.e8map-legend{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px solid var(--border);padding-top:14px}
+.e8l{display:flex;align-items:center;gap:7px;padding:7px 9px;border-radius:10px;text-decoration:none;color:inherit;transition:.16s;min-width:0}
+.e8l:hover{background:var(--sage-pale)}
+.e8l i{width:8px;height:8px;border-radius:50%;flex:none}
+.e8l b{font-size:.74rem;font-weight:800;color:var(--text3)}
+.e8l span{flex:1;font-size:.86rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.e8l em{font-style:normal;font-size:.82rem;font-weight:700;color:var(--sage-dark)}
+.e8l.gold{grid-column:1/-1;background:var(--gold-pale);border:1px solid rgba(196,154,82,.4)}
+.e8l.gold em{color:var(--gold)}
+/* ═══ восьмой лот, козырь ═══ */
+.kozyr-wrap{max-width:1180px;margin:0 auto;padding:30px 24px 40px}
+.kozyr{position:relative;overflow:hidden;display:grid;grid-template-columns:1.35fr .65fr;gap:34px;background:linear-gradient(135deg,#16241D 0%,#1F3628 55%,#243D2D 100%);border-radius:26px;padding:42px 40px}
+.kz-watermark{position:absolute;right:-10px;bottom:-52px;font-size:14rem;font-weight:900;letter-spacing:-.06em;color:#fff;opacity:.05;line-height:1;pointer-events:none}
+.kz-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(196,154,82,.16);border:1px solid rgba(196,154,82,.45);color:#E5C077;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border-radius:20px}
+.kz-badge svg{width:15px;height:15px}
+.kz-left h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin:18px 0 12px}
+.kz-left h2 span{color:#E5C077}
+.kz-desc{color:rgba(255,255,255,.72);font-size:1rem;line-height:1.65;max-width:620px}
+.kz-prods{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.kz-prod{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:11px 13px;color:#fff;font-size:.9rem;font-weight:500}
+.kz-prod svg{width:15px;height:15px;flex:none;color:#E5C077}
+.kz-right{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;z-index:2}
+.kz-old{color:rgba(255,255,255,.45);font-size:1.05rem;text-decoration:line-through}
+.kz-price{color:#fff;font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;letter-spacing:-.05em;line-height:1;margin:4px 0 12px}
+.kz-price small{font-size:1.3rem;font-weight:700}
+.kz-pill{background:#C49A52;color:#16241D;font-size:.8rem;font-weight:800;padding:8px 15px;border-radius:20px;margin-bottom:18px}
+.kz-btn{display:inline-flex;align-items:center;gap:9px;background:#C49A52;color:#16241D;font-weight:800;font-size:1rem;padding:16px 26px;border-radius:14px;text-decoration:none;transition:.18s;width:100%;justify-content:center}
+.kz-btn:hover{background:#D9B36A}
+.kz-btn svg{width:18px;height:18px}
+.kz-note{color:rgba(255,255,255,.55);font-size:.84rem;line-height:1.5;margin-top:14px}
+@media(max-width:1024px){
+  .kozyr{grid-template-columns:1fr;gap:26px;padding:32px 24px}
+  .kz-right{align-items:stretch}
+}
+@media(max-width:768px){
+  .e8map{padding:16px 14px 14px;border-radius:18px}
+  .e8map-legend{grid-template-columns:1fr}
+  .kozyr-wrap{padding:20px 16px 30px}
+  .kz-prods{grid-template-columns:1fr}
+  .kz-watermark{font-size:9rem;bottom:-30px}
+}
+
 /* секция «Почему восьмёрка» */
 .eight-wrap{max-width:1180px;margin:0 auto;padding:56px 24px 0}
 .eight{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:22px;padding:34px 34px 30px;box-shadow:0 4px 30px rgba(59,122,90,.05)}
@@ -880,9 +931,9 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <div class="nav-r">
       <a href="#quiz">Тест</a>
       <a href="#blocks">Круги</a>
-      <a href="#flagship">Все восемь</a>
+      <a href="#flagship">Всё вместе</a>
       <a href="#vip">Личная работа</a>
-      <a href="#faq">FAQ</a>
+      <a href="#faq">Вопросы</a>
       <a href="#blocks" class="cta">Купить</a>
     </div>
   </div>
@@ -924,88 +975,90 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
       08.08 · три дня, 8, 9 и 10 августа
     </div>
-    <h1><span class="nowrap">Три дня, чтобы</span> <span class="underline">разомкнуть</span><br><span class="nowrap">свой <span class="sage">круг.</span> <span class="gold">Скидка 40%</span></span></h1>
-    <p class="hero-sub">Восьмое августа, <strong>08.08</strong>. Положите восьмёрку на бок и получите замкнутую линию: та же мысль в три ночи, та же цифра на счету, тот же сценарий с людьми. Мы собрали все восемь продуктов проекта в <strong>шесть кругов</strong>, и у каждого есть выход. Три дня, скидка 40%.</p>
+    <h1><span class="nowrap">Три дня, чтобы</span> <span class="underline">разорвать</span><br><span class="nowrap">свой <span class="sage">круг.</span> <span class="gold">Скидка 40%</span></span></h1>
+    <p class="hero-sub">Восьмое августа, <strong>08.08</strong>. Та же мысль в три ночи, та же сумма на карте к концу месяца, тот же сценарий с людьми: всё это ходит по кругу годами. Мы собрали восемь продуктов проекта в <strong>семь кругов</strong>, и у каждого круга есть выход. Три дня, скидка 40%.</p>
 
     <div class="hero-stats-bar">
       <div class="hsb"><b class="sage">3</b><i>Дня</i></div>
-      <div class="hsb"><b class="text">6</b><i>Кругов</i></div>
-      <div class="hsb"><b class="gold">−40<small>%</small></b><i>Скидки</i></div>
+      <div class="hsb"><b class="text">7</b><i>Кругов</i></div>
+      <div class="hsb"><b class="gold">−40<small>%</small></b><i>Скидка</i></div>
     </div>
 
     <div class="hero-ctas">
       <a href="#quiz" class="hero-btn-primary">Найти свой круг
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="#flagship" class="hero-btn-secondary">Все восемь за 14 540 ₽</a>
+      <a href="#flagship" class="hero-btn-secondary">Всё вместе за 14 540 ₽</a>
     </div>
   </div>
 
   <div class="hero-right reveal d2">
-    <div class="hero-savings">
-      <div class="hs-title">Карта распродажи</div>
-
-      <div class="hs-compare">
-        <div class="hs-cmp-item">
-          <div class="hs-cmp-label">Полная цена</div>
-          <div class="hs-cmp-num old">24 240 ₽</div>
-        </div>
-        <div class="hs-cmp-arrow">→</div>
-        <div class="hs-cmp-item" style="text-align:right">
-          <div class="hs-cmp-label" style="color:var(--sage)">Все восемь</div>
-          <div class="hs-cmp-num new">14 540 ₽</div>
-        </div>
-      </div>
-
-      <div class="hs-list">
-        <a href="#b1" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            01 · Круг шума
-          </div>
-          <div class="hs-disc">−40% · 2 690 ₽</div>
+    <div class="e8map">
+      <div class="e8map-title">Карта распродажи<span>08.08</span></div>
+      <svg class="e8map-svg" viewBox="0 32 480 196" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path d="M230 130C193 55 60 60 60 130C60 200 193 205 230 130C267 55 400 60 400 130C400 200 267 205 230 130Z" stroke="#D9E2DA" stroke-width="10" stroke-linecap="round"/>
+        <path d="M230 130C193 55 60 60 60 130C60 200 193 205 230 130C267 55 400 60 400 130C400 200 267 205 230 130Z" stroke="#3B7A5A" stroke-width="2" opacity=".35"/>
+        <path d="M230 130C193 55 60 60 60 130C60 200 193 205 230 130C267 55 400 60 400 130C400 200 267 205 230 130Z" stroke="#C49A52" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 700" class="e8-run"/>
+          <a href="#b1" class="e8n">
+            <circle cx="125" cy="76" r="20" fill="#fff" stroke="#1A9C8E" stroke-width="2.4"/>
+            <text x="125" y="80" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#1A9C8E">01</text>
+          </a>
+          <a href="#b2" class="e8n">
+            <circle cx="63" cy="112" r="20" fill="#fff" stroke="#B85C5C" stroke-width="2.4"/>
+            <text x="63" y="116" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#B85C5C">02</text>
+          </a>
+          <a href="#b3" class="e8n">
+            <circle cx="87" cy="174" r="20" fill="#fff" stroke="#3B7A5A" stroke-width="2.4"/>
+            <text x="87" y="178" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#3B7A5A">03</text>
+          </a>
+          <a href="#b4" class="e8n">
+            <circle cx="291" cy="81" r="20" fill="#fff" stroke="#C49A52" stroke-width="2.4"/>
+            <text x="291" y="85" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#C49A52">04</text>
+          </a>
+          <a href="#b5" class="e8n">
+            <circle cx="373" cy="86" r="20" fill="#fff" stroke="#4A7FB5" stroke-width="2.4"/>
+            <text x="373" y="90" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#4A7FB5">05</text>
+          </a>
+          <a href="#b6" class="e8n">
+            <circle cx="397" cy="148" r="20" fill="#fff" stroke="#6C5CE7" stroke-width="2.4"/>
+            <text x="397" y="152" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#6C5CE7">06</text>
+          </a>
+          <a href="#b7" class="e8n">
+            <circle cx="335" cy="184" r="20" fill="#fff" stroke="#2F6B4F" stroke-width="2.4"/>
+            <text x="335" y="188" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#2F6B4F">07</text>
+          </a>
+        <circle cx="230" cy="130" r="30" fill="#C49A52"/>
+        <circle cx="230" cy="130" r="36" fill="none" stroke="#C49A52" stroke-width="1.4" opacity=".45"/>
+        <a href="#flagship" class="e8n">
+          <circle cx="230" cy="130" r="30" fill="#C49A52"/>
+          <text x="230" y="136" text-anchor="middle" font-family="Inter" font-weight="800" font-size="17" fill="#fff">08</text>
         </a>
-        <a href="#b2" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            02 · Круг тела
-          </div>
-          <div class="hs-disc">−40% · 3 580 ₽</div>
+      </svg>
+      <div class="e8map-cap">Семь кругов на линии восьмёрки, а в центре восьмой набор: в нём все продукты сразу.</div>
+      <div class="e8map-legend">
+        <a href="#b1" class="e8l">
+          <i style="background:#1A9C8E"></i><b>01</b><span>Шум</span><em>2 690 ₽</em>
         </a>
-        <a href="#b3" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            03 · Круг разрешения
-          </div>
-          <div class="hs-disc">−40% · 3 830 ₽</div>
+        <a href="#b2" class="e8l">
+          <i style="background:#B85C5C"></i><b>02</b><span>Тело</span><em>3 580 ₽</em>
         </a>
-        <a href="#b4" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            04 · Круг потолка
-          </div>
-          <div class="hs-disc">−40% · 4 730 ₽</div>
+        <a href="#b3" class="e8l">
+          <i style="background:#3B7A5A"></i><b>03</b><span>Одобрение</span><em>3 830 ₽</em>
         </a>
-        <a href="#b5" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            05 · Круг января
-          </div>
-          <div class="hs-disc">−40% · 5 080 ₽</div>
+        <a href="#b4" class="e8l">
+          <i style="background:#C49A52"></i><b>04</b><span>Потолок</span><em>4 730 ₽</em>
         </a>
-        <a href="#b6" class="hs-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-            06 · Круг сценария
-          </div>
-          <div class="hs-disc">−40% · 5 620 ₽</div>
+        <a href="#b5" class="e8l">
+          <i style="background:#4A7FB5"></i><b>05</b><span>Январь</span><em>5 080 ₽</em>
         </a>
-        <a href="#flagship" class="hs-row gold-row">
-          <div class="hs-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l3 12h14l3-12-6 5-4-7-4 7-6-5z"/></svg>
-            Флагман · Все восемь
-          </div>
-          <div class="hs-disc">−40% · 14 540 ₽</div>
+        <a href="#b6" class="e8l">
+          <i style="background:#6C5CE7"></i><b>06</b><span>Сценарий</span><em>5 620 ₽</em>
+        </a>
+        <a href="#b7" class="e8l">
+          <i style="background:#2F6B4F"></i><b>07</b><span>Откладывание</span><em>6 230 ₽</em>
+        </a>
+        <a href="#flagship" class="e8l gold">
+          <i style="background:#C49A52"></i><b>08</b><span>Всё вместе</span><em>14 540 ₽</em>
         </a>
       </div>
     </div>
@@ -1015,7 +1068,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <!-- ═══ TRUST PILLS ═══ -->
 <div class="trust-bar">
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Только 3 дня</div>
-  <div class="trust-pill gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>Скидка 40%</div>
+  <div class="trust-pill gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>Скидка 40% на все круги</div>
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>Доступ навсегда</div>
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>8 продуктов проекта</div>
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Безопасная оплата</div>
@@ -1050,14 +1103,14 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     </div>
     <div class="eight-txt">
       <div class="sec-tag">Почему восьмёрка</div>
-      <h2>Круг это то, что <span class="sage">повторяется само.</span></h2>
+      <h2>Круг это то, что <span class="sage">повторяется само собой.</span></h2>
       <p>Положите восьмёрку на бок, и получится замкнутая линия. По ней удобно ходить годами и называть это характером.</p>
       <ol class="eight-steps">
         <li><b>Левая петля.</b> То, что возвращается: мысль в три ночи, жалоба тела, одна и та же цифра дохода, знакомый сценарий с людьми.</li>
-        <li><b>Разрыв.</b> Момент, где механизм становится видно. Дальше линию ведёте вы.</li>
-        <li><b>Правая петля.</b> Куда всё это идёт, когда больше ничего не заворачивает назад.</li>
+        <li><b>Разрыв.</b> Момент, когда виден сам механизм. Дальше линию ведёте вы.</li>
+        <li><b>Правая петля.</b> То, что начинается, когда круг больше не возвращает вас в начало.</li>
       </ol>
-      <div class="eight-foot">Ниже шесть таких кругов. Отметьте свои в тесте, и мы покажем, что брать.</div>
+      <div class="eight-foot">Ниже семь таких кругов и восьмой набор, где собрано всё. Отметьте в тесте свои, и мы покажем, с чего начать.</div>
     </div>
   </div>
 </section>
@@ -1067,9 +1120,9 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <section class="quiz-wrap reveal" id="quiz">
   <div class="quiz">
     <div class="quiz-head">
-      <div class="sec-tag">Восемь вопросов</div>
+      <div class="sec-tag">Десять вопросов</div>
       <h2>Какой круг <span class="sage">ваш?</span></h2>
-      <p>Отметьте то, в чём узнаёте себя. Ниже покажем, с какого блока начать.</p>
+      <p>Отметьте то, в чём узнаёте себя. Ниже покажем, с какого круга начать.</p>
     </div>
     <div class="quiz-grid">
       <label class="qz">
@@ -1084,7 +1137,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <input type="checkbox" data-b="b2">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
         <span class="qz-body">
-          <span class="qz-text">Тело сигналит, а обследования чистые</span>
+          <span class="qz-text">Тело даёт о себе знать, а обследования чистые</span>
           <span class="qz-tag">Круг тела</span>
         </span>
       </label>
@@ -1093,7 +1146,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
         <span class="qz-body">
           <span class="qz-text">Сначала спрашиваю мнение, потом решаю</span>
-          <span class="qz-tag">Круг разрешения</span>
+          <span class="qz-tag">Круг одобрения</span>
         </span>
       </label>
       <label class="qz">
@@ -1124,7 +1177,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <input type="checkbox" data-b="b4">
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
         <span class="qz-body">
-          <span class="qz-text">Деньги приходят и утекают, будто есть предел</span>
+          <span class="qz-text">Деньги приходят и утекают, будто выше какой-то суммы не подняться</span>
           <span class="qz-tag">Круг потолка</span>
         </span>
       </label>
@@ -1133,7 +1186,23 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
         <span class="qz-body">
           <span class="qz-text">Соглашаюсь через силу, потом злюсь на себя</span>
-          <span class="qz-tag">Круг разрешения</span>
+          <span class="qz-tag">Круг одобрения</span>
+        </span>
+      </label>
+      <label class="qz">
+        <input type="checkbox" data-b="b7">
+        <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
+        <span class="qz-body">
+          <span class="qz-text">Всё понимаю, но до дела так и не доходит</span>
+          <span class="qz-tag">Круг откладывания</span>
+        </span>
+      </label>
+      <label class="qz">
+        <input type="checkbox" data-b="b7">
+        <span class="qz-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>
+        <span class="qz-body">
+          <span class="qz-text">Курсы пройдены, а жизнь прежняя</span>
+          <span class="qz-tag">Круг откладывания</span>
         </span>
       </label>
     </div>
@@ -1150,53 +1219,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   </div>
 </section>
 
-<!-- ═══ HOW IT WORKS: 3 шага ═══ -->
-<section class="how-wrap">
-  <div class="how-inner">
-    <div class="sec-head reveal" style="margin-bottom:32px">
-      <div class="sec-tag">Как это работает</div>
-      <h2>Три шага, <span class="sage">и материалы у вас.</span></h2>
-      <p>Выбираете круг, оплачиваете, получаете доступ. Всё занимает пару минут.</p>
-    </div>
-
-    <div class="how-grid">
-      <!-- Стрелки между шагами -->
-      <div class="how-arrow a1">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h20M20 10l6 6-6 6"/></svg>
-      </div>
-      <div class="how-arrow a2">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h20M20 10l6 6-6 6"/></svg>
-      </div>
-
-      <div class="how-step reveal">
-        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-        <div class="how-num">1</div>
-        <h4>Найдите свой круг</h4>
-        <p>Шесть кругов, у каждого своя боль и свой выход. Начать можно с <b>«Круга шума»</b> за 2 690 ₽. Если узнали себя везде, берите <b>«Все восемь»</b> за 14 540 ₽.</p>
-      </div>
-
-      <div class="how-step reveal d2">
-        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        <div class="how-num">2</div>
-        <h4>Оплатите удобным способом</h4>
-        <p>На странице оплаты доступна банковская <b>карта</b>, <b>СБП</b>, <b>SberPay</b>, <b>T-Pay</b>. Платёж проходит безопасно, чек приходит на вашу почту автоматически.</p>
-      </div>
-
-      <div class="how-step gold reveal d3">
-        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <div class="how-num">3</div>
-        <h4>Получите доступ</h4>
-        <p>В течение <b>1-2 минут</b> приходит письмо с приглашением в <b>закрытый Telegram-канал</b>, где лежат все материалы круга. Доступ остаётся <b>навсегда</b>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="blocks">
   <div class="sec-head reveal">
-    <div class="sec-tag">Шесть кругов · скидка 40%</div>
-    <h2>Шесть кругов. <span class="gold">Из каждого</span> <span class="sage">есть выход.</span></h2>
-    <p>Круг это то, что повторяется у человека годами и кажется характером. В каждом блоке первый материал показывает механизм, второй даёт систему, третий закрепляет. Выбирайте по своей истории: <strong>скидка везде одна, 40%</strong>.</p>
+    <div class="sec-tag">Семь кругов · скидка 40%</div>
+    <h2>Семь кругов. <span class="gold">Из каждого</span> <span class="sage">есть выход.</span></h2>
+    <p>Внутри каждого круга от двух до четырёх материалов: один показывает механизм, остальные доводят до практики. Круг берётся целиком, одной оплатой. Выбирайте по своей истории: <strong>скидка везде одна, 40%</strong>.</p>
   </div>
 
   <div class="b-grid">
@@ -1219,7 +1246,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           Круг 01 · Шум
         </span>
         <h3>Мысли крутятся<br>по одному кругу.</h3>
-        <p class="card-desc">Один и тот же разговор в голове, один и тот же завтрашний день, и так до трёх ночи. Двадцать восемь утренних заходов снимают шум, а запись «Выбор» показывает решение, которое этот круг держит.</p>
+        <p class="card-desc">Один и тот же разговор в голове, одни и те же мысли про завтра, и так до трёх ночи. 28 утренних практик снимают шум, а запись «Выбор» показывает то решение, на котором этот круг держится.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1279,7 +1306,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           Круг 02 · Тело
         </span>
         <h3>Анализы чистые,<br>а тело говорит своё.</h3>
-        <p class="card-desc">Спина, живот, кожа, цикл: тело возвращается к одной и той же жалобе, а врачи разводят руками. Три материала про то, откуда берётся эта жалоба и как перестать воевать с собственным отражением.</p>
+        <p class="card-desc">Спина, живот, кожа, женский цикл: тело возвращается к одной и той же жалобе, а врачи разводят руками. Три материала про то, откуда она берётся и как перестать воевать с собственным телом.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1328,7 +1355,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       </div>
     </article>
 
-    <!-- КРУГ 03 · РАЗРЕШЕНИЕ -->
+    <!-- КРУГ 03 · ОДОБРЕНИЕ -->
     <article class="card c-green reveal d2" id="b3">
       <div class="card-illust">
         <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1343,10 +1370,10 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <div class="card-head">
         <span class="card-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
-          Круг 03 · Разрешение
+          Круг 03 · Одобрение
         </span>
         <h3>Сначала спрошу,<br>потом решу.</h3>
-        <p class="card-desc">Решение уже принято внутри, но звонок подруге всё равно нужен, и после него решение меняется. Внутренний Авторитет возвращает право решать самой, «Выбор» показывает момент, где это право было отдано.</p>
+        <p class="card-desc">Решение уже принято внутри, но звонок подруге всё равно нужен, и после него всё переигрывается. «Внутренний авторитет» возвращает право решать без чужого одобрения, «Выбор» показывает, когда это право было отдано.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1406,7 +1433,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           Круг 04 · Потолок
         </span>
         <h3>Доход упирается<br>в одну и ту же цифру.</h3>
-        <p class="card-desc">Сколько бы ни приходило, к концу месяца остаётся та же сумма, будто внутри стоит ограничитель. Биохимия денег показывает, как гормоны решают за вас в момент траты, Код денег разбирает механизм по шагам за 14 дней.</p>
+        <p class="card-desc">Сколько бы ни приходило, к концу месяца остаётся та же сумма, будто внутри стоит ограничитель. «Биохимия денег» показывает, как гормоны решают за вас в момент покупки, «Код денег» разбирает механизм по шагам за 14 дней.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1466,7 +1493,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           Круг 05 · Январь
         </span>
         <h3>Каждый год обещаю<br>себе одно и то же.</h3>
-        <p class="card-desc">Первое января, новый список, к февралю всё как было, и так несколько лет подряд. Код нового года собирает точку старта заново, Протокол закрепляет её ежедневной практикой, «Выбор» убирает то, что каждый раз возвращает назад.</p>
+        <p class="card-desc">Первое января, новый список, к февралю всё как было, и так несколько лет подряд. «Код нового года» помогает начать год заново, «Протокол остановки ума» закрепляет это ежедневной практикой, «Выбор» убирает то, что каждый раз тянет обратно.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1533,7 +1560,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           Круг 06 · Сценарий
         </span>
         <h3>История повторяется,<br>меняются только лица.</h3>
-        <p class="card-desc">Те же отношения, та же роль, тот же финал, и каждый раз кажется, что теперь будет иначе. Четыре материала про тело, внешность и право сказать нет, чтобы сценарий перестал писать себя сам.</p>
+        <p class="card-desc">Те же отношения, та же роль, тот же финал, и каждый раз кажется, что теперь будет иначе. Четыре материала про тело, внешность и право сказать «нет», чтобы этот сценарий перестал повторяться.</p>
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
@@ -1589,163 +1616,108 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       </div>
     </article>
 
+    <!-- КРУГ 07 · ОТКЛАДЫВАНИЕ -->
+    <article class="card c-green reveal d6" id="b7">
+      <div class="card-illust">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 32C24 20 8 20 8 32s16 12 24 0c8-12 24-12 24 0s-16 12-24 0z" opacity=".18"/>
+          <path d="M32 32C24 20 8 20 8 32s16 12 24 0" stroke-width="2.6"/>
+          <path d="M32 32c6-9 16-11 22-15" stroke-width="2.6"/>
+          <path d="M48 14l6-3 1 6" stroke-width="2.4"/>
+          <circle cx="32" cy="32" r="2.4" fill="currentColor"/>
+          <path d="M10 26v12M10 26h13l-3 4 3 4H10" opacity=".85"/>
+        </svg>
+      </div>
+      <div class="card-head">
+        <span class="card-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 12c-2-3-6-3-6 0s4 3 6 0c2-3 6-3 6 0s-4 3-6 0z"/></svg>
+          Круг 07 · Откладывание
+        </span>
+        <h3>Всё знаю.<br>И всё равно не делаю.</h3>
+        <p class="card-desc">Курсы пройдены, книги прочитаны, а жизнь та же: понимание есть, движения нет. Здесь разбираем то решение, из-за которого всё стоит, возвращаем право действовать, не спрашивая ни у кого, и заново назначаем день старта.</p>
+
+        <div class="save-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+          <div class="save-bar-text">Экономия <b>4 150 ₽</b> · скидка <b>40%</b></div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 дня + 7 дней + 90 минут</span>
+          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>3 материала</span>
+        </div>
+
+        <ul class="includes">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <div class="li-content">
+              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <div class="li-content">
+              <span class="li-name">Внутренний Авторитет · 7 дней, 3 встречи (4 900 ₽)</span>
+              <a href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <div class="li-content">
+              <span class="li-name">Код нового года · 3-дневный интенсив (3 990 ₽)</span>
+              <a href="https://thebodymindcode.github.io/NewYearCode/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="card-foot">
+        <div class="price-row">
+          <span class="price-old">10 380 ₽</span>
+          <span class="price-new">6 230 <small>₽</small></span>
+        </div>
+        <div class="btns">
+          <a href="#" data-pay="b7" target="_blank" rel="noopener" class="btn-primary">Выйти из круга
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
   </div>
 
 </section>
 
-<!-- ═══ BLOCKS MAP — визуальная схема ═══ -->
-<div class="bmap-wrap reveal">
-  <div class="bmap">
-    <div class="bmap-head">
-      <div class="bmap-tag">Визуальная карта</div>
-      <h3>Шесть кругов сходятся<br>во <span class="gold">«Все восемь»</span></h3>
-      <p>В проекте ровно восемь продуктов, и восьмого августа они сходятся в одну цену. Внутри Биохимии денег едет книга на 144 страницы, отдельно её брать не нужно.</p>
-    </div>
-
-    <div class="bmap-svg-wrap">
-      <svg class="bmap-svg" viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bmGold" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#C49A52"/>
-            <stop offset="50%" stop-color="#D4AF6E"/>
-            <stop offset="100%" stop-color="#C49A52"/>
-          </linearGradient>
-          <linearGradient id="bmSage" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#5AA67A"/>
-            <stop offset="100%" stop-color="#3B7A5A"/>
-          </linearGradient>
-        </defs>
-
-        <!-- 6 малых блоков сверху -->
-        <g>
-          <!-- Block 1 -->
-          <g transform="translate(40,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#1A9C8E" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="url(#bmSage)"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="8.5" fill="#1A9C8E" letter-spacing="0.5">01 · ШУМ</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">2 690 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#C49A52">−40%</text>
-          </g>
-          <!-- Block 2 -->
-          <g transform="translate(170,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#B85C5C" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="#B85C5C"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="8.5" fill="#B85C5C" letter-spacing="0.5">02 · ТЕЛО</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">3 580 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#C49A52">−40%</text>
-          </g>
-          <!-- Block 3 -->
-          <g transform="translate(300,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#3B7A5A" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="#3B7A5A"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="7" fill="#3B7A5A" letter-spacing="0.5">03 · РАЗРЕШЕНИЕ</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">3 830 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#C49A52">−40%</text>
-          </g>
-          <!-- Block 4 -->
-          <g transform="translate(430,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#C49A52" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="#C49A52"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="7" fill="#C49A52" letter-spacing="0.5">04 · ПОТОЛОК</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">4 730 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#C49A52">−40%</text>
-          </g>
-          <!-- Block 5 -->
-          <g transform="translate(560,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#4A7FB5" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="#4A7FB5"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="8.5" fill="#4A7FB5" letter-spacing="0.5">05 · ЯНВАРЬ</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">5 080 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#C49A52">−40%</text>
-          </g>
-          <!-- Block 6 -->
-          <g transform="translate(690,30)">
-            <rect width="100" height="56" rx="10" fill="#fff" stroke="#6C5CE7" stroke-width="1.5"/>
-            <rect width="100" height="3" rx="1.5" fill="#6C5CE7"/>
-            <text x="50" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="7" fill="#6C5CE7" letter-spacing="0.5">06 · СЦЕНАРИЙ</text>
-            <text x="50" y="38" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#111">5 620 ₽</text>
-            <text x="50" y="50" text-anchor="middle" font-family="Inter" font-weight="600" font-size="8" fill="#6C5CE7">−40%</text>
-          </g>
-        </g>
-
-        <!-- Соединяющие линии -->
-        <g stroke="#C49A52" stroke-width="1.3" fill="none" stroke-dasharray="3 3" opacity=".4">
-          <path d="M90 90 Q 90 130 440 130"/>
-          <path d="M220 90 Q 220 130 440 130"/>
-          <path d="M350 90 Q 350 130 440 130"/>
-          <path d="M510 90 Q 510 130 440 130"/>
-          <path d="M640 90 Q 640 130 440 130"/>
-          <path d="M770 90 Q 770 130 440 130"/>
-        </g>
-
-        <!-- Стрелка вниз -->
-        <g transform="translate(440,135)">
-          <path d="M0 -3 L0 12 M-5 7 L0 12 L5 7" stroke="#C49A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </g>
-
-        <!-- Большой блок флагмана -->
-        <g transform="translate(140,160)">
-          <rect width="600" height="100" rx="14" fill="url(#bmGold)" opacity=".08"/>
-          <rect width="600" height="100" rx="14" fill="none" stroke="#C49A52" stroke-width="2"/>
-          <rect width="600" height="5" rx="2.5" fill="url(#bmGold)"/>
-          <!-- Crown icon -->
-          <g transform="translate(28,30)">
-            <path d="M0 12 L4 0 L10 8 L16 -2 L22 8 L28 0 L32 12 Z" fill="#C49A52"/>
-          </g>
-          <text x="80" y="42" font-family="Inter" font-weight="800" font-size="13" fill="#C49A52" letter-spacing="1">ФЛАГМАН · ВСЕ ВОСЕМЬ</text>
-          <text x="80" y="62" font-family="Inter" font-weight="500" font-size="10" fill="#555">Восемь продуктов проекта в одной цене</text>
-          <text x="80" y="80" font-family="Inter" font-weight="500" font-size="9" fill="#999" text-decoration="line-through">24 240 ₽</text>
-          <text x="572" y="56" text-anchor="end" font-family="Inter" font-weight="800" font-size="22" fill="#111" letter-spacing="-0.5">14 540 ₽</text>
-          <rect x="500" y="70" width="72" height="20" rx="10" fill="#C49A52"/>
-          <text x="536" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#fff" letter-spacing="0.5">−40%</text>
-        </g>
-      </svg>
-    </div>
-
-    <div class="bmap-legend">
-      <div class="bmap-leg l-block">Шесть кругов · скидка 40%</div>
-      <div class="bmap-leg l-flag">Флагман «Все восемь» · скидка 40%</div>
-    </div>
-  </div>
-</div>
-<div class="flagship-wrap reveal" id="flagship">
-  <div class="flagship">
-    <div class="flagship-crown">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-      Флагман распродажи
-    </div>
-    <div class="fl-left">
-      <div class="fl-tag">Флагман · Все восемь продуктов · скидка 40%</div>
-      <h3>Все восемь продуктов.<br><span class="gold">Все круги сразу.</span></h3>
-      <p class="fl-desc">Восьмого августа восемь продуктов проекта сходятся в одну цену. Если узнали себя больше чем в одном круге, это самый спокойный вариант: берёте всё и разбираетесь по порядку.</p>
-
-      <div class="fl-prods">
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Протокол остановки ума</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Выбор</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>За пределами заболеваний</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Красота без оправданий</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Внутренний Авторитет</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код денег</div>
-        <div class="fl-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код нового года</div>
-        <div class="fl-prod" style="grid-column:1/-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Биохимия денег</div>
+<!-- ═══ 08 · ВСЁ ВМЕСТЕ (козырь) ═══ -->
+<section class="kozyr-wrap reveal" id="flagship">
+  <div class="kozyr">
+    <div class="kz-watermark">08</div>
+    <div class="kz-left">
+      <div class="kz-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4l3 12h14l3-12-6 5-4-7-4 7-6-5z"/></svg>
+        Восьмой набор · главный за эти три дня
       </div>
-
-      <div class="fl-savings-bar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-        <div class="fl-savings-bar-text">Вы экономите <b>9 700 ₽</b> и получаете книгу на 144 страницы внутри</div>
+      <h2>Всё вместе.<br><span>Семь кругов и восемь продуктов.</span></h2>
+      <p class="kz-desc">Каждый круг разбирает одну историю. Восьмой набор берёт сразу все: восемь продуктов в одной оплате, ничего не дублируется и не надо решать, с чего начать.</p>
+      <div class="kz-prods">
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Протокол остановки ума</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Выбор</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>За пределами заболеваний</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Красота без оправданий</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Внутренний Авторитет</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код денег</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код нового года</div>
+        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Биохимия денег</div>
       </div>
     </div>
-    <div class="fl-right">
-      <div class="fl-old">24 240 ₽</div>
-      <div class="fl-price">14 540<small> ₽</small></div>
-      <div class="fl-save-pill">−40% · экономия 9 700 ₽</div>
-      <a href="#" data-pay="flag" target="_blank" rel="noopener" class="fl-btn">Забрать все восемь
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <p class="fl-bonus">+ можно взять лот <b>«Всё под ключ»</b><br>с сессией Дарьи за 23 900 ₽</p>
+    <div class="kz-right">
+      <div class="kz-old">24 240 ₽</div>
+      <div class="kz-price">14 540<small> ₽</small></div>
+      <div class="kz-pill">минус 40%, экономия 9 700 ₽</div>
+      <a href="#" data-pay="flag" target="_blank" rel="noopener" class="kz-btn">Забрать всё вместе<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="kz-note">Если нужен ещё и личный разбор, ниже есть «Всё под ключ» с сессией Дарьи за 23 900 ₽.</p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ═══ ЛИЧНАЯ РАБОТА ═══ -->
 <div class="vip-wrap" id="vip">
@@ -1756,21 +1728,21 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   </div>
   <div class="sec-head reveal" style="margin-bottom:28px">
     <div class="sec-tag">Личная работа</div>
-    <h2>Восемь мест <span class="gold">с Дарьей.</span></h2>
-    <p>Записи разбирают механизм вообще, сессия разбирает вашу историю. Мест ровно восемь, как и продуктов в проекте. После оплаты напишите в поддержку слово «СЕССИЯ», подберём удобное время.</p>
+    <h2>Восемь мест <span class="gold">на личную работу.</span></h2>
+    <p>Записи объясняют, как это устроено у всех. Сессия разбирает вашу историю. Мест ровно восемь, как и продуктов в проекте. После оплаты напишите в поддержку слово «СЕССИЯ», подберём удобное время.</p>
   </div>
   <div class="vip-grid three">
     <article class="vip-card reveal">
-      <div class="vip-crown">Лот A · 3 места</div>
+      <div class="vip-crown">Вариант A · 3 места</div>
       <div class="vip-head">
         <h3><span class="vip-icon">💎</span>Сессия с Дарьей</h3>
-        <p>Шестьдесят или девяносто минут один на один. Берём один круг и доводим его до механизма.</p>
+        <p>60 или 90 минут один на один. Берём одну вашу тему и доходим до причины.</p>
       </div>
       <div class="vip-features">
         <div class="vip-feat">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
           <div>
-            <div class="vip-feat-title">Работа с корнем запроса</div>
+            <div class="vip-feat-title">Идём к причине повтора</div>
             <div class="vip-feat-desc">Смотрим, что запускает повтор и как из него выйти</div>
           </div>
         </div>
@@ -1805,7 +1777,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     </article>
 
     <article class="vip-card reveal d2">
-      <div class="vip-crown">Лот B · 3 места</div>
+      <div class="vip-crown">Вариант B · 3 места</div>
       <div class="vip-head">
         <h3><span class="vip-icon">💰</span>Деньги под ключ</h3>
         <p>Круг потолка целиком плюс личный разбор вашей ситуации с деньгами.</p>
@@ -1829,7 +1801,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
           <div>
             <div class="vip-feat-title">Сессия с Дарьей</div>
-            <div class="vip-feat-desc">Разбираем именно вашу цифру и что её держит</div>
+            <div class="vip-feat-desc">Разбираем именно вашу планку в доходе и то, что её держит</div>
           </div>
         </div>
       </div>
@@ -1842,14 +1814,14 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="vip-price-old">22 890 ₽</span>
           <span class="vip-price-new">13 900 <small>₽</small></span>
         </div>
-        <a href="#" data-pay="mkey" target="_blank" rel="noopener" class="vip-btn">Забрать лот
+        <a href="#" data-pay="mkey" target="_blank" rel="noopener" class="vip-btn">Забрать вариант
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </article>
 
     <article class="vip-card reveal d3" style="border-color:#C49A52;border-width:2px">
-      <div class="vip-crown">Лот C · 2 места</div>
+      <div class="vip-crown">Вариант C · 2 места</div>
       <div class="vip-head">
         <h3><span class="vip-icon">👑</span>Всё под ключ</h3>
         <p>Вся библиотека проекта и личная работа. Самый большой лот этих трёх дней.</p>
@@ -1859,7 +1831,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
           <div>
             <div class="vip-feat-title">Все восемь продуктов</div>
-            <div class="vip-feat-desc">Каждый круг разобран, доступ навсегда</div>
+            <div class="vip-feat-desc">Все семь кругов целиком, доступ навсегда</div>
           </div>
         </div>
         <div class="vip-feat">
@@ -1873,7 +1845,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
           <div>
             <div class="vip-feat-title">Книга «Механизмы сдвига»</div>
-            <div class="vip-feat-desc">Едет внутри Биохимии денег</div>
+            <div class="vip-feat-desc">Входит в «Биохимию денег»</div>
           </div>
         </div>
       </div>
@@ -1900,16 +1872,16 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <div class="pre-badge">Старт в сентябре · предпродажа</div>
     <div class="pre-head">
       <h2>Протокол денег.<br><span class="sage">Место в новом потоке.</span></h2>
-      <p>Записи можно смотреть когда угодно, а поток идёт живым составом. Семнадцать дней, ежедневные уроки, приложение с картой прогресса и дневником состояния, закрытый канал потока. До десятого августа место стоит на 20% дешевле, дальше по обычной цене.</p>
+      <p><strong>Это отдельная покупка, она не входит ни в один круг.</strong> Поток стартует в сентябре и идёт вживую, одной группой: 17 дней, каждый день новый урок, приложение на телефоне с картой прогресса и дневником состояния, закрытый канал группы. До 10 августа место стоит на 20% дешевле, дальше по обычной цене.</p>
     </div>
     <div class="pre-grid">
       <div class="pre-card">
         <div class="pre-name">Доступ</div>
         <ul class="pre-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>17 дней с ежедневными уроками</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Задания, мануалы и трекер</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Личное приложение с картой прогресса</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Закрытый канал потока</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>17 дней, каждый день новый урок</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Задания, инструкции и дневник практики</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Приложение на телефоне с картой прогресса</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Закрытый канал группы</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Доступ к материалам навсегда</li>
         </ul>
         <div class="pre-price"><span class="pre-old">3 500 ₽</span><b>2 800 <small>₽</small></b></div>
@@ -1920,7 +1892,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <ul class="pre-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Всё из тарифа «Доступ»</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Еженедельные разборы с Дарьей в прямом эфире</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Возможность разобрать свою ситуацию на эфире</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Можно разобрать свою ситуацию прямо на эфире</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Записи всех разборов остаются у вас</li>
         </ul>
         <div class="pre-price"><span class="pre-old">9 900 ₽</span><b>7 900 <small>₽</small></b></div>
@@ -1936,7 +1908,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <div class="sec-head reveal">
       <div class="sec-tag">1500+ участников</div>
       <h2>Что меняется <span class="sage">за 28 дней.</span></h2>
-      <p>Это не теория из книг. Это то, что пишут участники после прохождения программ. Каждая цифра, это <strong>реальный результат</strong>, измеренный самими людьми.</p>
+      <p>Так пишут сами участники после программ. Каждая цифра из наших опросов за десять лет.</p>
     </div>
 
     <!-- TRANSFORMATIONS BEFORE/AFTER -->
@@ -1992,7 +1964,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <g>
             <rect x="175" y="40" width="125" height="200" rx="14" fill="url(#trGradR)" stroke="#3B7A5A" stroke-width="1.5"/>
             <text x="237" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#3B7A5A" letter-spacing="1.5">ПОСЛЕ</text>
-            <text x="237" y="35" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#3B7A5A">прохождения блока</text>
+            <text x="237" y="35" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#3B7A5A">первой программы</text>
 
             <!-- Calm mind icon - circle/ripples -->
             <g transform="translate(237,90)" stroke="#3B7A5A" fill="none" stroke-linecap="round">
@@ -2030,7 +2002,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
       <div class="brain-info-text">
         <h3>Короткая практика утром. <span class="sage">Двадцать восемь дней подряд.</span></h3>
-        <p>Изменение идёт по расписанию: <strong>программы построены как система</strong>, где каждое утро есть короткая практика. Через 28 дней вы замечаете, что внутри стало по-другому.</p>
+        <p>Всё держится на расписании: одно и то же действие каждое утро, без рывков. Через 28 дней человек замечает, что внутри стало тише.</p>
         <div class="brain-list">
           <div class="brain-list-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -2042,7 +2014,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           </div>
           <div class="brain-list-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <div><b>Появляется ясность в действиях</b>: куда идти, что делать, во что вкладываться</div>
+            <div><b>Становится понятно</b>, куда идти и что делать дальше</div>
           </div>
         </div>
       </div>
@@ -2078,12 +2050,12 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <div class="r-val">92<small>%</small></div>
-        <div class="r-label">Отмечают значимые изменения после прохождения</div>
+        <div class="r-label">Отмечают заметные изменения после первой же программы</div>
         <div class="r-bar"><div class="r-bar-fill"></div></div>
       </div>
     </div>
 
-    <p class="r-sources">Цифры основаны на внутренних опросах участников программ за период <b>2016-2026</b></p>
+    <p class="r-sources">Цифры из наших опросов участников с <b>2016-2026</b></p>
   </div>
 </section>
 
@@ -2092,7 +2064,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   <div class="sec-head reveal">
     <div class="sec-tag">Авторы проекта</div>
     <h2>Дарья и Алексей.<br><span class="sage">Восьмёрка это их число.</span></h2>
-    <p>Совпадение, в которое сложно поверить: оба основателя проекта родились <strong>8 мая</strong>. Восьмёрка стала числом «Архитектуры сознания», поэтому вторую открытую дату года мы поставили на <strong>08.08</strong>.</p>
+    <p>Оба основателя проекта родились <strong>8 мая</strong>. Восьмёрка стала числом «Архитектуры сознания», поэтому и вторую распродажу года мы открыли <strong>08.08</strong>.</p>
   </div>
 
   <!-- BIRTHDAY CONNECTOR — визуальная связь -->
@@ -2123,7 +2095,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <div class="auth-avatar">Д</div>
         <div>
           <div class="auth-name">Дарья Ростовцева</div>
-          <div class="auth-role">Со-основатель · ведущая живых программ</div>
+          <div class="auth-role">Сооснователь · ведущая живых программ</div>
         </div>
       </div>
       <div class="auth-stats">
@@ -2131,8 +2103,8 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <div class="auth-stat"><b>350+</b><small>Сессий 1:1</small></div>
         <div class="auth-stat"><b>500+</b><small>Учеников в год</small></div>
       </div>
-      <p class="auth-bio">Со-основатель проекта <strong>«Архитектура сознания»</strong>. Автор техник и практик работы с программами, убеждениями, тревогой, психосоматикой и повторяющимися сценариями жизни. Ведёт глубинную индивидуальную работу один на один.</p>
-      <p class="auth-bio" style="margin-top:10px"><strong>Дарья</strong>, голос проекта в живых программах. Она там, где нужно вытащить человека из ямы внутренних блоков, из паттерна «снова не получилось», из тела, которое болит без причины. Точечная работа, без воды и обещаний.</p>
+      <p class="auth-bio">Сооснователь проекта <strong>«Архитектура сознания»</strong>. Работает с убеждениями, тревогой, психосоматикой и сценариями, которые повторяются годами. Ведёт глубокую личную работу один на один.</p>
+      <p class="auth-bio" style="margin-top:10px"><strong>Дарья</strong>, голос проекта в живых программах. Она там, где человек застрял в «снова не получилось» и в теле, которое болит без причины. Работает точно и по делу.</p>
     </article>
 
     <article class="auth-card alex reveal d2">
@@ -2140,7 +2112,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <div class="auth-avatar">А</div>
         <div>
           <div class="auth-name">Алексей Федотов</div>
-          <div class="auth-role">Со-основатель · автор концепции</div>
+          <div class="auth-role">Сооснователь · автор концепции</div>
         </div>
       </div>
       <div class="auth-tags">
@@ -2148,74 +2120,116 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <span class="auth-tag">Автор и соавтор программ</span>
         <span class="auth-tag">Внимание · мышление · тело</span>
       </div>
-      <p class="auth-bio">Создатель концепции <strong>«Архитектура сознания»</strong>: идеи, что внутренние состояния (внимание, мышление, тело, отношения) можно проектировать как архитектор проектирует здание. Автор и соавтор всех продуктов проекта вместе с Дарьей.</p>
-      <p class="auth-bio" style="margin-top:10px">Темы, на которых живёт проект: ясность, тишина в голове, выбор себя, тело без сопротивления. <strong>Главное, что мы делаем вместе с Дарьей</strong>, это упаковываем сложные внутренние процессы в понятные, рабочие практики, которые человек может применить уже сегодня утром.</p>
+      <p class="auth-bio">Создатель концепции <strong>«Архитектура сознания»</strong>: внимание, мышление и состояние тела можно спроектировать так же, как архитектор проектирует дом. Автор и соавтор всех продуктов проекта вместе с Дарьей.</p>
+      <p class="auth-bio" style="margin-top:10px">Темы проекта: ясность, тишина в голове, право выбирать за себя, спокойное тело. <strong>Главное, что мы делаем вместе с Дарьей</strong>: превращаем сложные внутренние процессы в простые практики, которые можно сделать завтра утром.</p>
     </article>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS: 3 шага ═══ -->
+<section class="how-wrap">
+  <div class="how-inner">
+    <div class="sec-head reveal" style="margin-bottom:32px">
+      <div class="sec-tag">Как это работает</div>
+      <h2>Три шага, <span class="sage">и материалы у вас.</span></h2>
+      <p>Выбираете круг, оплачиваете, получаете доступ. Всё занимает пару минут.</p>
+    </div>
+
+    <div class="how-grid">
+      <!-- Стрелки между шагами -->
+      <div class="how-arrow a1">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h20M20 10l6 6-6 6"/></svg>
+      </div>
+      <div class="how-arrow a2">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h20M20 10l6 6-6 6"/></svg>
+      </div>
+
+      <div class="how-step reveal">
+        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <div class="how-num">1</div>
+        <h4>Найдите свой круг</h4>
+        <p>Семь кругов, у каждого своя история и свой выход. Начать можно с <b>«Круга шума»</b> за 2 690 ₽. Если узнали себя везде, берите <b>«Всё вместе»</b> за 14 540 ₽.</p>
+      </div>
+
+      <div class="how-step reveal d2">
+        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <div class="how-num">2</div>
+        <h4>Оплатите удобным способом</h4>
+        <p>Оплата <b>картой</b>, через <b>СБП</b>, <b>SberPay</b> или <b>T-Pay</b>. Платёж проходит безопасно, чек приходит на вашу почту автоматически.</p>
+      </div>
+
+      <div class="how-step gold reveal d3">
+        <svg class="how-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="how-num">3</div>
+        <h4>Получите доступ</h4>
+        <p>В течение <b>1-2 минут</b> приходит письмо с приглашением в <b>закрытый Telegram-канал</b>, где лежат все материалы круга. Доступ остаётся <b>навсегда</b>.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ═══ FAQ ═══ -->
 <section class="faq-section" id="faq">
   <div class="sec-head reveal">
-    <div class="sec-tag">Восемь вопросов</div>
+    <div class="sec-tag">Частые вопросы</div>
     <h2>Вопросы и <span class="sage">ответы.</span></h2>
   </div>
 
   <div class="reveal">
     <div class="fq">
-      <button class="fq-q">Я узнал себя сразу в нескольких кругах. Что брать?
+      <button class="fq-q">Узнаю себя сразу в нескольких кругах. Что брать?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Начните с того, что мешает каждый день: чаще всего это <strong>Круг шума</strong> за 2 690 ₽. Если узнали себя в трёх и больше, выгоднее сразу <strong>«Все восемь»</strong> за 14 540 ₽: там все круги и экономия 9 700 ₽.</p></div>
+      <div class="fq-a"><p>Начните с того, что мешает каждый день: чаще всего это <strong>Круг шума</strong> за 2 690 ₽. Если узнали себя в трёх и больше, выгоднее сразу <strong>«Всё вместе»</strong> за 14 540 ₽: там все восемь продуктов и экономия 9 700 ₽.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">Когда придёт доступ к материалам?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>В течение <strong>1-2 минут</strong> после оплаты приходит ссылка на закрытый Telegram-канал со всем содержимым круга. Живые встречи внутри программ идут по расписанию каждой программы и остаются в записи.</p></div>
+      <div class="fq-a"><p>Ссылка на закрытый Telegram-канал приходит за 1-2 минуты. Живые встречи идут по расписанию своей программы и остаются в записи.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">Чем «Биохимия денег» отличается от книги «Механизмы сдвига»?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Книга входит внутрь «Биохимии денег» вместе с трёхчасовым эфиром. Отдельно её покупать не нужно: если берёте Круг потолка или «Все восемь», книга уже у вас.</p></div>
+      <div class="fq-a"><p>Книга входит в «Биохимию денег» вместе с трёхчасовым эфиром. Отдельно её покупать не нужно: если берёте Круг потолка или «Всё вместе», книга уже у вас.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">«Протокол денег» это запись или живой поток?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Живой поток на 17 дней со стартом в сентябре, с ежедневными уроками и приложением. Сейчас идёт предпродажа места со скидкой 20%, на тарифе «Полный доступ» добавляются еженедельные разборы с Дарьей.</p></div>
+      <div class="fq-a"><p>Живой поток: 17 дней, старт в сентябре, каждый день урок и приложение. Сейчас место стоит на 20% дешевле. На тарифе «Полный доступ» добавляются еженедельные разборы с Дарьей.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">Часть программ у меня уже куплена. Что делать?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Напишите в поддержку <strong>до оплаты</strong> и скажите, что уже есть. Подберём круг с меньшим пересечением или предложим вариант под вашу задачу. Платить дважды за одно и то же не нужно.</p></div>
+      <div class="fq-a"><p>Напишите в поддержку <strong>до оплаты</strong> и скажите, что уже есть. Подберём круг, где меньше повторов с тем, что у вас уже куплено, или соберём вариант под вашу задачу. Платить дважды за одно и то же не нужно.</p></div>
     </div>
 
     <div class="fq">
-      <button class="fq-q">На какой срок остаётся доступ?
+      <button class="fq-q">Надолго ли остаётся доступ?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Записи и материалы остаются <strong>навсегда</strong>, без подписок и ежемесячных платежей. Закрытые чаты сопровождения работают на время прохождения активной программы.</p></div>
+      <div class="fq-a"><p>Записи и материалы остаются <strong>навсегда</strong>, без подписок и ежемесячных платежей. Закрытые чаты работают, пока идёт сама программа.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">Что будет после 10 августа?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>С 11 августа цены возвращаются к обычным, а круги как наборы просто исчезают: продукты останутся в магазине поштучно. О следующих открытых днях объявим в Telegram-канале проекта.</p></div>
+      <div class="fq-a"><p>С 11 августа цены возвращаются к обычным, а сами круги пропадают: продукты останутся в продаже по отдельности. О следующей распродаже объявим в Telegram-канале проекта.</p></div>
     </div>
 
     <div class="fq">
       <button class="fq-q">Как можно оплатить?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="fq-a"><p>Банковская карта, СБП, SberPay, T-Pay, а также зарубежная карта через локальный банк. Чек приходит на почту автоматически.</p></div>
+      <div class="fq-a"><p>Банковская карта, СБП, SberPay, T-Pay. Принимаем и карты иностранных банков. Чек приходит на почту автоматически.</p></div>
     </div>
 
   </div>
@@ -2226,7 +2240,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   <div class="sec-head reveal">
     <div class="sec-tag">Что вы получаете</div>
     <h2>Доступ к&nbsp;программам<br><span class="sage">и всё, что помогает их пройти.</span></h2>
-    <p>К записям любого круга добавляются инструменты, которые доводят практику до конца: тетради, чек-листы и живой чат участников.</p>
+    <p>К записям любого круга идут тетради, чек-листы и живой чат участников.</p>
   </div>
 
   <div class="gifts-grid">
@@ -2252,8 +2266,8 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <polyline points="10 9 9 9 8 9"/>
         </svg>
       </div>
-      <div class="gift-title">Тетради и мануалы</div>
-      <div class="gift-desc">PDF-материалы, чек-листы, дневники практики. Чтобы переносить инсайты в реальные действия.</div>
+      <div class="gift-title">Тетради и материалы</div>
+      <div class="gift-desc">PDF-материалы, чек-листы, дневники практики. Чтобы понятое дошло до дела.</div>
     </div>
 
     <div class="gift-card g-rose reveal d2">
@@ -2284,12 +2298,12 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   <div class="fc-content">
     <div class="fc-tag">Закрываемся 10 августа в 23:59</div>
     <h2>Три дня. <span>Восемь продуктов.</span></h2>
-    <p>Восьмёрка замыкается сама на себя, и по ней легко ходить годами. Восьмого августа мы открываем весь проект на три дня, чтобы вам было чем эту линию разомкнуть.</p>
+    <p>Восьмёрка замкнута сама на себя, и ходить по ней можно годами. 8 августа мы открываем весь проект на три дня, чтобы этот круг было чем разорвать. Закрываемся 10 августа в 23:59.</p>
     <div class="fc-buttons">
       <a href="#quiz" class="fc-btn-primary">Найти свой круг
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="#flagship" class="fc-btn-secondary">Все восемь за 14 540 ₽</a>
+      <a href="#flagship" class="fc-btn-secondary">Всё вместе за 14 540 ₽</a>
     </div>
   </div>
 </section>
@@ -2301,7 +2315,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <a href="https://instagram.com/thebodymindcode" target="_blank">Instagram</a>
     <a href="#blocks">Круги</a>
     <a href="#vip">Личная работа</a>
-    <a href="#faq">FAQ</a>
+    <a href="#faq">Вопросы</a>
   </div>
   <p class="ft-copy">© 2026 Архитектура сознания. ИП Ростовцева Дарья Валерьевна · ИНН: 241103415641</p>
 </footer>
@@ -2319,7 +2333,7 @@ const PAY = {
   b4:     '',   /* Круг 04 · Потолок       · 4 730 ₽ */
   b5:     '',   /* Круг 05 · Январь        · 5 080 ₽ */
   b6:     '',   /* Круг 06 · Сценарий      · 5 620 ₽ */
-  flag:   '',   /* Флагман · Все восемь    · 14 540 ₽ */
+  flag:   '',   /* Набор «Всё вместе»      · 14 540 ₽ */
   ses:    '',   /* Сессия с Дарьей         · 10 500 ₽, 3 места */
   mkey:   '',   /* Деньги под ключ         · 13 900 ₽, 3 места */
   allkey: '',   /* Всё под ключ            · 23 900 ₽, 2 места */
@@ -2342,7 +2356,7 @@ const SUPPORT = 'https://t.me/TheBodyMindCode_support';
 })();
 
 /* тест-конструктор: складываем выбранные круги */
-const CIRCLES = {"b1": {"num": "01", "name": "Круг шума", "price": 2690, "old": 4480, "items": ["Протокол остановки ума", "Выбор"]}, "b2": {"num": "02", "name": "Круг тела", "price": 3580, "old": 5970, "items": ["За пределами заболеваний", "Красота без оправданий", "Протокол остановки ума"]}, "b3": {"num": "03", "name": "Круг разрешения", "price": 3830, "old": 6390, "items": ["Внутренний Авторитет", "Выбор"]}, "b4": {"num": "04", "name": "Круг потолка", "price": 4730, "old": 7890, "items": ["Биохимия денег", "Код денег"]}, "b5": {"num": "05", "name": "Круг января", "price": 5080, "old": 8470, "items": ["Код нового года", "Протокол остановки ума", "Выбор"]}, "b6": {"num": "06", "name": "Круг сценария", "price": 5620, "old": 9370, "items": ["Красота без оправданий", "За пределами заболеваний", "Внутренний Авторитет", "Выбор"]}};
+const CIRCLES = {"b1": {"num": "01", "name": "Круг шума", "price": 2690, "old": 4480, "items": ["Протокол остановки ума", "Выбор"]}, "b2": {"num": "02", "name": "Круг тела", "price": 3580, "old": 5970, "items": ["За пределами заболеваний", "Красота без оправданий", "Протокол остановки ума"]}, "b3": {"num": "03", "name": "Круг одобрения", "price": 3830, "old": 6390, "items": ["Внутренний Авторитет", "Выбор"]}, "b4": {"num": "04", "name": "Круг потолка", "price": 4730, "old": 7890, "items": ["Биохимия денег", "Код денег"]}, "b5": {"num": "05", "name": "Круг января", "price": 5080, "old": 8470, "items": ["Код нового года", "Протокол остановки ума", "Выбор"]}, "b6": {"num": "06", "name": "Круг сценария", "price": 5620, "old": 9370, "items": ["Красота без оправданий", "За пределами заболеваний", "Внутренний Авторитет", "Выбор"]}, "b7": {"num": "07", "name": "Круг откладывания", "price": 6230, "old": 10380, "items": ["Выбор", "Внутренний Авторитет", "Код нового года"]}};
 const FLAG = {price: 14540, old: 24240, count: 8};
 const money = n => n.toLocaleString('ru-RU').replace(/\u00A0/g, ' ') + ' \u20BD';
 const plural = (n, a, b, c) => {
@@ -2397,19 +2411,19 @@ const plural = (n, a, b, c) => {
 
     if (takeAll){
       cta.innerHTML =
-        '<div class="qr-adv">Вам выгоднее взять <b>«Все восемь»</b> за ' + money(FLAG.price) +
-        ': это все восемь продуктов проекта, без повторов и без сборки из кусков.</div>' +
-        '<div class="qr-btns"><a class="qr-btn gold" href="' + payHref('flag') + '" target="_blank" rel="noopener">Взять все восемь за ' + money(FLAG.price) + '</a>' +
+        '<div class="qr-adv">Вам выгоднее взять <b>«Всё вместе»</b> за ' + money(FLAG.price) +
+        ': это все восемь продуктов проекта в одной оплате, и докупать ничего не придётся.</div>' +
+        '<div class="qr-btns"><a class="qr-btn gold" href="' + payHref('flag') + '" target="_blank" rel="noopener">Взять «Всё вместе» за ' + money(FLAG.price) + '</a>' +
         '<a class="qr-btn ghost" href="#blocks">Сначала посмотреть круги</a></div>';
     } else {
       const left = FLAG.price - sum;
       cta.innerHTML =
-        '<div class="qr-adv">Берите ' + (n === 1 ? 'этот круг' : 'эти круги') + ' по отдельности, каждый оплачивается своей кнопкой. ' +
-        'До «Все восемь» остаётся ' + money(left) + ', а там ещё ' + (FLAG.count - Object.keys(seen).length) + ' ' +
+        '<div class="qr-adv">' + (n === 1 ? 'Этот круг оплачивается своей кнопкой. ' : 'Берите эти круги по отдельности, каждый оплачивается своей кнопкой. ') +
+        'До набора «Всё вместе» остаётся ' + money(left) + ', а там ещё ' + Math.max(1, FLAG.count - Object.keys(seen).length) + ' ' +
         plural(FLAG.count - Object.keys(seen).length, 'продукт', 'продукта', 'продуктов') + ' сверху.</div>' +
         '<div class="qr-btns">' + keys.map(k =>
           '<a class="qr-btn" href="' + payHref(k) + '" target="_blank" rel="noopener">' + CIRCLES[k].name + ' за ' + money(CIRCLES[k].price) + '</a>').join('') +
-        '<a class="qr-btn ghost" href="#flagship">Посмотреть «Все восемь»</a></div>';
+        '<a class="qr-btn ghost" href="#flagship">Посмотреть «Всё вместе»</a></div>';
     }
     res.hidden = false;
   }

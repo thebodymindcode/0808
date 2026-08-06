@@ -27,7 +27,7 @@
     },
     {
       "num": "03",
-      "word": "Разрешение",
+      "word": "Одобрение",
       "old": 6390,
       "new": 3830,
       "save": 2560,
@@ -74,6 +74,19 @@
         "beyond",
         "authority",
         "choice"
+      ]
+    },
+    {
+      "num": "07",
+      "word": "Откладывание",
+      "old": 10380,
+      "new": 6230,
+      "save": 4150,
+      "pct": 40,
+      "items": [
+        "choice",
+        "authority",
+        "newyear"
       ]
     }
   ],

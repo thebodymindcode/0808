@@ -770,6 +770,39 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 .quiz-res-btn:hover{background:var(--sage-dark)}
 .quiz-res-btn svg{width:17px;height:17px}
 .vip-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ссылки «подробнее о продукте» в наборе, лотах и предпродаже */
+.kz-prod{text-decoration:none;transition:.16s}
+.kz-prod:hover{background:rgba(255,255,255,.12);border-color:rgba(229,192,119,.55)}
+.kz-ext{width:13px;height:13px;margin-left:auto;color:#E5C077;opacity:.75;flex:none}
+.vip-links{display:flex;flex-direction:column;gap:7px;margin:2px 0 16px}
+.vip-links a{display:inline-flex;align-items:center;gap:6px;font-size:.83rem;font-weight:600;color:var(--sage);text-decoration:none;transition:.16s}
+.vip-links a:hover{color:var(--sage-dark);text-decoration:underline}
+.vip-links svg{width:12px;height:12px}
+.pre-link{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:700;color:var(--sage);text-decoration:none;margin-bottom:12px}
+.pre-link:hover{text-decoration:underline}
+.pre-link svg{width:13px;height:13px}
+
+/* блок цифр: ровная сетка, ничего не наезжает */
+.results-grid{gap:16px}
+.r-card{padding:26px 20px 22px;border-radius:20px;box-shadow:0 2px 14px rgba(17,17,17,.03);gap:0}
+.r-card:hover{box-shadow:0 10px 26px rgba(17,17,17,.07)}
+.r-icon{width:48px;height:48px;border-radius:15px;margin:0 auto 16px;border:1px solid rgba(59,122,90,.16);background:var(--sage-pale)}
+.r-icon svg{width:23px;height:23px;color:var(--sage)}
+.r-val{font-size:clamp(1.9rem,3.4vw,2.5rem);font-weight:900;letter-spacing:-.045em;line-height:1;color:var(--sage-dark);margin-bottom:12px;font-variant-numeric:tabular-nums}
+.r-val small{font-size:.5em;font-weight:800;margin-left:1px}
+.r-label{display:flex;flex-direction:column;gap:3px;min-height:44px;font-size:.82rem;line-height:1.4}
+.r-label b{font-weight:700;color:var(--text)}
+.r-label span{color:var(--text3);font-weight:500}
+.r-bar{height:6px;border-radius:3px;background:rgba(59,122,90,.1);margin-top:18px}
+.r-bar-fill{background:linear-gradient(90deg,var(--sage),#5AA67A)}
+.r-since{margin-top:18px;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.r-sources{margin-top:18px}
+@media(max-width:768px){
+  .r-card{padding:20px 14px 18px;border-radius:16px}
+  .r-icon{width:42px;height:42px;border-radius:13px;margin-bottom:12px}
+  .r-label{min-height:0}
+}
+
 /* обновлённая графика низа страницы */
 .gift-icon{width:58px;height:58px;border-radius:18px;box-shadow:0 3px 12px rgba(17,17,17,.05);border:1px solid rgba(17,17,17,.05)}
 .gift-icon svg{width:27px;height:27px}
@@ -1711,14 +1744,14 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <h2>Всё вместе.<br><span>Семь кругов и восемь продуктов.</span></h2>
       <p class="kz-desc">Каждый круг разбирает одну историю. Восьмой набор берёт сразу все: восемь продуктов в одной оплате, ничего не дублируется и не надо решать, с чего начать.</p>
       <div class="kz-prods">
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Протокол остановки ума</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Выбор</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>За пределами заболеваний</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Красота без оправданий</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Внутренний Авторитет</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код денег</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код нового года</div>
-        <div class="kz-prod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Биохимия денег</div>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/protocol" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Протокол остановки ума<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Выбор<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/Beyond/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>За пределами заболеваний<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/beauty/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Красота без оправданий<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Внутренний Авторитет<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/themoneycode/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код денег<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/NewYearCode/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Код нового года<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="kz-prod" href="https://thebodymindcode.github.io/biohimmoney/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Биохимия денег<svg class="kz-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </div>
     </div>
     <div class="kz-right">
@@ -1773,6 +1806,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           </div>
         </div>
       </div>
+      <div class="vip-links"><a href="https://thebodymindcode.github.io/session1/" target="_blank" rel="noopener">Подробнее о сессии с Дарьей<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
       <div class="vip-foot">
         <div class="vip-spots">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -1817,6 +1851,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           </div>
         </div>
       </div>
+      <div class="vip-links"><a href="https://thebodymindcode.github.io/biohimmoney/" target="_blank" rel="noopener">Подробнее о продукте «Биохимия денег»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a href="https://thebodymindcode.github.io/themoneycode/" target="_blank" rel="noopener">Подробнее о продукте «Код денег»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
       <div class="vip-foot">
         <div class="vip-spots">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -1836,7 +1871,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <div class="vip-crown">Вариант C · 2 места</div>
       <div class="vip-head">
         <h3><span class="vip-icon">👑</span>Всё под ключ</h3>
-        <p>Вся библиотека проекта и личная работа. Самый большой лот этих трёх дней.</p>
+        <p>Все восемь продуктов проекта и личная работа с Дарьей. Самый большой вариант этих трёх дней.</p>
       </div>
       <div class="vip-features">
         <div class="vip-feat">
@@ -1861,6 +1896,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           </div>
         </div>
       </div>
+      <div class="vip-links"><a href="https://thebodymindcode.github.io/protocol" target="_blank" rel="noopener">Подробнее о продукте «Протокол остановки ума»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a href="https://thebodymindcode.github.io/themoneycode/" target="_blank" rel="noopener">Подробнее о продукте «Код денег»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener">Подробнее о продукте «Внутренний Авторитет»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
       <div class="vip-foot">
         <div class="vip-spots solid">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -1884,6 +1920,8 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <div class="pre-badge">Старт в сентябре · предпродажа</div>
     <div class="pre-head">
       <h2>Протокол денег.<br><span class="sage">Место в новом потоке.</span></h2>
+      <a class="pre-link" href="https://thebodymindcode.github.io/moneyaccess/" target="_blank" rel="noopener">Подробнее о продукте
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       <p><strong>Это отдельная покупка, она не входит ни в один круг.</strong> Поток стартует в сентябре и идёт вживую, одной группой: 17 дней, каждый день новый урок, приложение на телефоне с картой прогресса и дневником состояния, закрытый канал группы. До 10 августа место стоит на 20% дешевле, дальше по обычной цене.</p>
     </div>
     <div class="pre-grid">
@@ -1918,8 +1956,8 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <section class="science-strip">
   <div class="science-inner">
     <div class="sec-head reveal">
-      <div class="sec-tag">1500+ участников</div>
-      <h2>Что меняется <span class="sage">за 28 дней.</span></h2>
+      <div class="sec-tag">2500+ участников</div>
+      <h2>Что меняется <span class="sage">у участников.</span></h2>
       <p>Так пишут сами участники после программ. Каждая цифра из наших опросов за десять лет.</p>
     </div>
 
@@ -2033,42 +2071,34 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     </div>
 
     <div class="results-grid">
-      <div class="r-card reveal" style="--w:78%">
-        <div class="r-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-        </div>
+      <div class="r-card reveal">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 14.2c1 1.2 2.2 1.8 3.6 1.8s2.6-.6 3.6-1.8"/><path d="M9 9.4h.01M15 9.4h.01" stroke-width="2.4"/></svg></div>
         <div class="r-val">78<small>%</small></div>
-        <div class="r-label">Отмечают, что фоновая тревога ушла после Протокола</div>
-        <div class="r-bar"><div class="r-bar-fill"></div></div>
+        <div class="r-label"><b>Фоновая тревога ушла</b><span>после 28 дней Протокола</span></div>
+        <div class="r-bar" style="--w:78%"><div class="r-bar-fill"></div></div>
       </div>
-      <div class="r-card reveal d1" style="--w:84%">
-        <div class="r-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
+      <div class="r-card reveal">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12a8.6 8.6 0 1 1-2.5-6.1"/><path d="M21 3.6v5h-5"/><path d="M8.6 12.2l2.4 2.4 4.6-5"/></svg></div>
         <div class="r-val">84<small>%</small></div>
-        <div class="r-label">Возвращаются за следующей программой в течение года</div>
-        <div class="r-bar"><div class="r-bar-fill"></div></div>
+        <div class="r-label"><b>Возвращаются за следующей</b><span>программой в течение года</span></div>
+        <div class="r-bar" style="--w:84%"><div class="r-bar-fill"></div></div>
       </div>
-      <div class="r-card reveal d2" style="--w:95%">
-        <div class="r-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <div class="r-val">1500<small>+</small></div>
-        <div class="r-label">Прошли программы проекта</div>
-        <div class="r-bar"><div class="r-bar-fill"></div></div>
+      <div class="r-card reveal">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.4 20.4v-1.8a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1.8"/><circle cx="9.2" cy="7.4" r="3.6"/><path d="M22 20.4v-1.8a4 4 0 0 0-3-3.86M15.6 3.9a4 4 0 0 1 0 7.5"/></svg></div>
+        <div class="r-val">2500<small>+</small></div>
+        <div class="r-label"><b>Человек прошли</b><span>программы проекта</span></div>
+        <div class="r-since">с 2016 года</div>
       </div>
-      <div class="r-card reveal d3" style="--w:92%">
-        <div class="r-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
+      <div class="r-card reveal">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9z"/></svg></div>
         <div class="r-val">92<small>%</small></div>
-        <div class="r-label">Отмечают заметные изменения после первой же программы</div>
-        <div class="r-bar"><div class="r-bar-fill"></div></div>
+        <div class="r-label"><b>Отмечают заметные изменения</b><span>после первой же программы</span></div>
+        <div class="r-bar" style="--w:92%"><div class="r-bar-fill"></div></div>
       </div>
     </div>
 
-    <p class="r-sources">Цифры из наших опросов участников с <b>2016-2026</b></p>
-  </div>
+    <p class="r-sources">Цифры из наших опросов участников с <b>2016 по 2026 год</b></p>
+
 </section>
 
 <!-- ═══ AUTHORS ═══ -->
@@ -2316,7 +2346,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <a href="#vip">Личная работа</a>
     <a href="#faq">Вопросы</a>
   </div>
-  <p class="ft-copy">© 2026 Архитектура сознания. ИП Ростовцева Дарья Валерьевна · ИНН: 241103415641<br><span style="opacity:.55;font-size:.78rem">сборка 06.08.2026, 19:53</span></p>
+  <p class="ft-copy">© 2026 Архитектура сознания. ИП Ростовцева Дарья Валерьевна · ИНН: 241103415641<br><span style="opacity:.55;font-size:.78rem">сборка 06.08.2026, 20:05</span></p>
 </footer>
 
 <script>

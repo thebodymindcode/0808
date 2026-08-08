@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <meta name="theme-color" content="#16241D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Архитектура сознания">
+<meta property="og:title" content="08.08 · Пять дней, чтобы разорвать свой круг">
+<meta property="og:description" content="Семь кругов из восьми продуктов проекта, скидка 40%. Только с 8 по 12 августа.">
+<meta property="og:url" content="https://thebodymindcode.ru/0808/">
+<meta property="og:image" content="https://thebodymindcode.ru/0808/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://thebodymindcode.ru/0808/og.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -11,11 +21,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="format-detection" content="telephone=no">
-<title>08.08 · Восьмёрка. Три дня, чтобы разорвать свой круг | Архитектура сознания</title>
-<meta name="description" content="8-10 августа 2026. Семь кругов, восемь продуктов проекта, скидка 40%. Предпродажа Протокола денег.">
+<title>08.08 · Восьмёрка. Пять дней, чтобы разорвать свой круг | Архитектура сознания</title>
+<meta name="description" content="8-12 августа 2026. Семь кругов, восемь продуктов проекта, скидка 40%. Предпродажа Протокола денег.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;overflow-x:hidden;font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
@@ -770,6 +780,270 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 .quiz-res-btn:hover{background:var(--sage-dark)}
 .quiz-res-btn svg{width:17px;height:17px}
 .vip-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* полоса выгоды в карточке круга */
+.pricebar{margin:12px 0 4px}
+.pb-track{height:8px;border-radius:6px;background:rgba(17,17,17,.07);overflow:hidden}
+.pb-fill{height:100%;border-radius:6px;width:0;background:linear-gradient(90deg,var(--ccol,var(--sage)),color-mix(in srgb,var(--ccol,#3B7A5A) 55%,#fff));transition:width 1.1s cubic-bezier(.4,0,.2,1)}
+.card.vis .pb-fill{width:var(--w)}
+.pb-legend{display:flex;justify-content:space-between;gap:10px;margin-top:7px;font-size:.79rem;font-weight:600;color:var(--text3)}
+.pb-legend span:first-child{color:var(--ccol,var(--sage-dark))}
+@media(max-width:768px){.pb-legend{font-size:.76rem}}
+
+/* мобильная плотность: тест и круги компактнее, читать легче */
+@media(max-width:768px){
+  .qz{min-height:52px!important;padding:12px 13px!important;gap:11px!important}
+  .qz-text{font-size:.94rem!important;line-height:1.35!important}
+  .qz-tag{font-size:.74rem!important}
+  .quiz{padding:24px 16px!important}
+  .quiz-head{margin-bottom:18px!important}
+  .qr-row{padding:11px 13px!important}
+  .qr-btn{min-height:52px!important;font-size:.95rem!important}
+  .eight-steps li{padding-left:36px!important;font-size:.95rem!important}
+  .eight-steps li:before{width:25px!important;height:25px!important}
+  .eight-art{padding:12px 4px!important;border-radius:14px!important}
+  .kz-prod{padding:12px 13px!important;font-size:.9rem!important}
+  .vip-feat-title{font-size:.95rem!important}
+  .r-card{padding:18px 12px 16px!important}
+  .r-val{font-size:1.85rem!important;margin-bottom:9px!important}
+  .gift-card{padding:20px 16px!important}
+}
+
+/* ═══ ПОЛИРОВКА ТЕЛЕФОНА (07.08) ═══ */
+@media(max-width:768px){
+  /* 1. зоны нажатия: всё, что кликается, не меньше 44px */
+  .e8l{min-height:52px!important;padding:13px 15px!important}
+  .vip-links a{min-height:46px;padding:11px 16px}
+  .ft-bottom a,.ft-links a{min-height:44px;display:inline-flex;align-items:center}
+  .brand{min-height:44px;display:inline-flex;align-items:center}
+  .e8n circle{r:26}
+  /* 2. первый экран: сразу видно суть и кнопку, без лишней прокрутки */
+  .hero{padding-top:22px!important;gap:18px!important}
+  .hero-tag{margin-bottom:12px!important}
+  .hero-sub{font-size:.95rem!important;line-height:1.62!important;margin-bottom:16px!important}
+  .hero-stats-bar{margin-bottom:16px!important}
+  .hero-ctas{gap:10px}
+  .hero-btn-primary,.hero-btn-secondary{min-height:54px;font-size:.98rem!important}
+  .cd-strip{padding:9px 12px}
+  /* 3. воздух между секциями ровный, а не рваный */
+  .sec,.quiz-wrap,.eight-wrap,.kozyr-wrap,.vip-wrap,.pre-wrap,.how-wrap,.faq-section,.gifts-section{padding-top:44px!important;padding-bottom:0!important}
+  .sec-head{margin-bottom:22px!important}
+  .sec-head h2{font-size:clamp(1.45rem,6.4vw,1.95rem)!important;line-height:1.16!important}
+  .sec-head p{font-size:.96rem!important;line-height:1.6!important}
+  /* 4. карточки кругов: плотнее, читаемее, кнопка крупнее */
+  .b-grid{gap:14px!important}
+  .card{border-radius:18px!important}
+  .card-head{padding:20px 16px 0!important}
+  .card-foot{padding:16px!important}
+  .card h3{font-size:1.22rem!important;line-height:1.22!important}
+  .btn-primary{min-height:56px!important;font-size:1.02rem!important;border-radius:14px!important}
+  .price-new{font-size:1.9rem!important}
+  .includes li{padding:12px 13px!important}
+  /* 5. блок «Всё вместе»: цена крупная, кнопка во всю ширину */
+  .kz-price{font-size:2.6rem!important}
+  .kz-btn{min-height:58px!important;font-size:1.02rem!important}
+  .kz-prods{gap:7px!important}
+  /* 6. личная работа и сентябрь */
+  .vip-btn,.pre-btn{min-height:56px!important;font-size:1rem!important}
+  .vip-card,.pre-card{padding:22px 18px!important;border-radius:18px!important}
+  /* 7. вопросы: удобно жать */
+  .fq-q{padding:18px 40px 18px 0!important;min-height:56px}
+  /* 8. липкая панель: плотнее и с ценой */
+  .mbar{padding:10px 14px calc(10px + env(safe-area-inset-bottom))!important}
+  .mbar-btn{min-height:48px!important;padding:0 20px!important}
+  body{padding-bottom:78px!important}
+}
+@media(max-width:400px){
+  .hero h1{font-size:1.52rem!important;line-height:1.16!important}
+  .card h3{font-size:1.14rem!important}
+  .kz-price{font-size:2.25rem!important}
+  .price-new{font-size:1.72rem!important}
+  .info-chip{font-size:.79rem!important;padding:8px 11px!important}
+}
+/* 9. плавнее и приятнее на палец */
+@media(hover:none){
+  .btn-primary:active,.kz-btn:active,.vip-btn:active,.pre-btn:active,.hero-btn-primary:active,.mbar-btn:active,.qr-btn:active{transform:scale(.985);filter:brightness(.95)}
+  .card:hover,.e8l:hover,.qr-row:hover,.gift-card:hover,.r-card:hover{transform:none;box-shadow:none}
+}
+
+/* ═══ баннер портала и подвал по стандарту проекта ═══ */
+.portal-wrap{padding:56px 24px 0;max-width:1180px;margin:0 auto}
+.portal{display:block;text-decoration:none;background:linear-gradient(135deg,#16241D 0%,#1F3628 60%,#243D2D 100%);border:1px solid rgba(196,154,82,.34);border-radius:24px;padding:52px 40px;text-align:center;box-shadow:0 22px 55px rgba(22,36,29,.14);transition:.2s}
+.portal:hover{transform:translateY(-2px);box-shadow:0 26px 62px rgba(22,36,29,.2)}
+.portal-tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#E5C077;font-weight:800;margin-bottom:12px}
+.portal-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.2rem;font-weight:700;color:#F5F0E8;line-height:1.1;margin-bottom:12px}
+.portal-desc{color:rgba(255,255,255,.68);max-width:620px;margin:0 auto 28px;line-height:1.6;font-size:.98rem}
+.portal-btn{display:inline-flex;align-items:center;gap:9px;background:#C49A52;color:#16241D;font-weight:800;padding:15px 32px;border-radius:13px;font-size:.95rem}
+.portal-btn svg{width:16px;height:16px}
+.ft{background:#16241D;color:rgba(255,255,255,.62);padding:48px 24px 34px;margin-top:56px}
+.ft-in{max-width:1180px;margin:0 auto}
+.ft-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.ft-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-weight:700;color:#F5F0E8;line-height:1.1}
+.ft-slogan{font-size:.86rem;color:rgba(255,255,255,.55);margin-top:5px}
+.ft-soc-row{display:flex;gap:11px;align-items:center;flex-wrap:wrap}
+.ft-tg{display:inline-flex;align-items:center;gap:9px;background:#C49A52;color:#16241D;text-decoration:none;padding:12px 21px;border-radius:12px;font-weight:800;font-size:.88rem;transition:.16s}
+.ft-tg:hover{background:#D9B36A}
+.ft-soc{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);display:inline-flex;align-items:center;justify-content:center;color:#EDE6DB;transition:.16s}
+.ft-soc:hover{background:rgba(255,255,255,.11);border-color:rgba(196,154,82,.5)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:28px;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.8rem}
+.ft-bottom a{color:rgba(255,255,255,.62);text-decoration:none}
+.ft-bottom a:hover{color:#E5C077}
+.ft-build{margin-top:14px;font-size:.74rem;color:rgba(255,255,255,.28)}
+@media(max-width:768px){
+  .portal-wrap{padding:36px 16px 0}
+  .portal{padding:34px 22px;border-radius:20px}
+  .portal-name{font-size:1.7rem}
+  .ft{padding:36px 18px 28px;margin-top:36px}
+  .ft-top{flex-direction:column;align-items:flex-start;gap:18px}
+  .ft-bottom{flex-direction:column;align-items:flex-start;font-size:.78rem}
+}
+
+/* ═══ крупнее и ровнее: убираем мелочь по всей странице ═══ */
+.card-badge{font-size:.84rem!important;font-weight:800;letter-spacing:.07em;padding:10px 17px!important;border-radius:13px!important;gap:9px!important}
+.card-badge svg{width:16px!important;height:16px!important}
+.card-desc{font-size:1.02rem!important;line-height:1.62!important}
+.save-bar{padding:14px 18px!important;border-radius:14px!important}
+.save-bar-text{font-size:.98rem!important}
+.save-bar>svg{width:20px!important;height:20px!important}
+.info-chip{font-size:.88rem!important;padding:10px 15px!important;border-radius:12px!important;gap:8px!important}
+.info-chip svg{width:16px!important;height:16px!important}
+.includes-head{font-size:.86rem;letter-spacing:.09em}
+.li-name b{font-size:1.08rem}
+.li-name em{font-size:.9rem}
+.li-link{font-size:.9rem!important;padding:9px 15px!important}
+.li-link svg{width:14px!important;height:14px!important}
+.price-old{font-size:1.06rem!important}
+.sec-tag{font-size:.82rem!important;letter-spacing:.14em}
+.trust-pill{font-size:.92rem!important;padding:11px 18px!important}
+.trust-pill svg{width:17px!important;height:17px!important}
+.hsb i{font-size:.86rem!important}
+.e8map-title{font-size:.82rem}
+.e8l-name{font-size:1rem}
+.e8l-price{font-size:.92rem}
+.e8map-cap{font-size:.9rem;line-height:1.55}
+.qz-text{font-size:1rem!important}
+.qz-tag{font-size:.8rem}
+.quiz-head p{font-size:1.02rem}
+.qr-row-name{font-size:1.02rem}
+.qr-row-name em{font-size:.86rem}
+.qr-row-p b{font-size:1.1rem}
+.qr-sum-l{font-size:.94rem}
+.qr-note{font-size:.95rem}
+.qr-adv{font-size:1rem}
+.eight-steps li{font-size:1rem}
+.eight-foot{font-size:.96rem}
+.kz-prod{font-size:.96rem!important;padding:13px 15px!important}
+.kz-note{font-size:.9rem}
+.vip-feat-title{font-size:.98rem!important}
+.vip-feat-desc{font-size:.88rem!important;line-height:1.45}
+.vip-spots{font-size:.82rem!important;padding:9px 15px!important}
+.vip-price-old{font-size:1.05rem!important}
+.vip-links a{font-size:.92rem}
+.pre-list li{font-size:1rem}
+.pre-list svg{width:17px;height:17px}
+.pre-old{font-size:1.05rem}
+.pre-name{font-size:1.22rem}
+.r-label{font-size:.88rem}
+.r-since{font-size:.78rem}
+.r-sources{font-size:.92rem!important}
+.gift-title{font-size:1.08rem!important}
+.gift-desc{font-size:.94rem!important;line-height:1.55}
+.fq-q{font-size:1.05rem!important}
+.fq-a p{font-size:.98rem!important;line-height:1.65}
+.how-step h4{font-size:1.12rem!important}
+.how-step p{font-size:.98rem!important}
+.auth-role{font-size:.86rem!important}
+.auth-tag{font-size:.82rem!important;padding:7px 13px!important}
+.auth-bio{font-size:.96rem!important;line-height:1.6}
+.bday-name{font-size:.95rem!important}
+.bday-middle-label{font-size:.78rem!important}
+.ft-links a{font-size:.98rem!important}
+.ft-copy{font-size:.88rem!important}
+.cd-pulse{font-size:.86rem!important}
+@media(max-width:768px){
+  .card-badge{font-size:.78rem!important;padding:9px 14px!important}
+  .card-desc{font-size:.97rem!important}
+  .info-chip{font-size:.83rem!important;padding:9px 13px!important}
+  .li-name b{font-size:1rem}
+  .li-link{font-size:.86rem!important}
+  .trust-pill{font-size:.86rem!important;padding:10px 15px!important}
+  .kz-prod{font-size:.92rem!important}
+  .fq-q{font-size:1rem!important}
+}
+
+/* иконка продукта в составе круга */
+.li-ico{flex:none;width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid rgba(17,17,17,.07);box-shadow:0 2px 8px rgba(17,17,17,.04);margin-top:0}
+.li-ico svg{width:23px;height:23px;color:var(--sage)}
+@supports (background: color-mix(in srgb, red 10%, white)){
+  .li-ico{background:color-mix(in srgb, currentColor 9%, #fff);border-color:color-mix(in srgb, currentColor 24%, transparent)}
+  .li-ico svg{color:currentColor}
+}
+
+.card.c-teal{--ccol:#1A9C8E}
+.card.c-rose{--ccol:#B85C5C}
+.card.c-green{--ccol:#3B7A5A}
+.card.c-gold{--ccol:#C49A52}
+.card.c-blue{--ccol:#4A7FB5}
+.card.c-violet{--ccol:#6C5CE7}
+.card .li-ico{color:var(--ccol,var(--sage))}
+.card .li-link{color:var(--ccol,var(--sage))!important;background:color-mix(in srgb,var(--ccol,#3B7A5A) 9%,#fff)!important;border-color:color-mix(in srgb,var(--ccol,#3B7A5A) 32%,transparent)!important}
+.card .li-link svg{color:var(--ccol,var(--sage))!important}
+.card .li-link:hover{background:var(--ccol,var(--sage))!important;color:#fff!important;border-color:var(--ccol,var(--sage))!important}
+.card .li-link:hover svg{color:#fff!important}
+.card .includes-head{color:var(--ccol,var(--sage-dark))}
+.includes li .li-ico svg{color:inherit;width:23px;height:23px;margin-top:0}
+.includes li{gap:14px;align-items:center}
+.includes li>svg{display:none}
+@media(max-width:768px){
+  .li-ico{width:38px;height:38px;border-radius:12px}
+  .includes li .li-ico svg{width:20px;height:20px}
+  .includes li{gap:11px}
+}
+
+/* логотип-восьмёрка в шапке */
+.brand{gap:9px}
+.brand-mark{width:36px;height:22px;flex:none}
+@media(max-width:768px){.brand-mark{width:30px;height:18px}}
+/* схема «до и после» */
+.brain-svg-container svg{max-width:360px}
+
+/* состав круга: продукты видно сразу */
+.includes-head{font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark);margin:20px 0 10px}
+.includes li{background:var(--bg);border:1px solid var(--border);border-radius:15px;padding:14px 16px;margin-bottom:9px;align-items:flex-start}
+.includes li>svg{margin-top:3px;color:var(--sage)}
+.card.c-gold .includes li>svg{color:var(--gold)}
+.li-name{display:block!important;color:var(--text)!important}
+.li-name b{display:block;font-size:1.04rem;font-weight:800;letter-spacing:-.02em;line-height:1.25;color:var(--text)}
+.li-name em{display:block;font-style:normal;font-size:.84rem;font-weight:500;color:var(--text3);margin-top:3px}
+@media(max-width:768px){
+  .includes li{padding:12px 13px;border-radius:13px}
+  .li-name b{font-size:.98rem}
+  .li-name em{font-size:.8rem}
+}
+
+/* ссылки на продукты: заметные чипы вместо мелкого текста */
+.li-link{font-size:.86rem!important;opacity:1!important;font-weight:700;padding:7px 13px;border-radius:999px;background:var(--sage-pale);border:1px solid rgba(59,122,90,.28);margin-top:6px;gap:7px}
+.li-link:hover{background:var(--sage);color:#fff;border-color:var(--sage)}
+.li-link:hover svg{color:#fff}
+.li-link svg{width:13px!important;height:13px!important}
+.card.c-gold .li-link{background:var(--gold-pale);border-color:rgba(196,154,82,.4);color:#9C7734}
+.card.c-gold .li-link svg{color:#9C7734}
+.card.c-gold .li-link:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.card.c-gold .li-link:hover svg{color:#fff}
+.includes li{margin-bottom:14px}
+.vip-links a{font-size:.9rem;font-weight:700;padding:8px 14px;border-radius:999px;background:var(--gold-pale);border:1px solid rgba(196,154,82,.4);color:#9C7734;align-self:flex-start}
+.vip-links a:hover{background:var(--gold);color:#fff;text-decoration:none;border-color:var(--gold)}
+.vip-links a svg{width:13px;height:13px}
+.pre-link{font-size:1rem;padding:10px 18px;border-radius:999px;background:var(--sage-pale);border:1px solid rgba(59,122,90,.3);margin-bottom:16px}
+.pre-link:hover{background:var(--sage);color:#fff;text-decoration:none}
+.pre-link svg{width:15px;height:15px}
+.kz-prod{position:relative}
+.kz-ext{width:15px;height:15px;opacity:1}
+@media(max-width:768px){
+  .li-link{font-size:.82rem!important;padding:6px 11px}
+  .vip-links a{font-size:.85rem}
+  .pre-link{font-size:.92rem}
+}
+
 /* ссылки «подробнее о продукте» в наборе, лотах и предпродаже */
 .kz-prod{text-decoration:none;transition:.16s}
 .kz-prod:hover{background:rgba(255,255,255,.12);border-color:rgba(229,192,119,.55)}
@@ -963,6 +1237,13 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   .pre{padding:28px 20px;border-radius:18px}
   .pre-card{padding:22px 18px}
 }
+
+@media(max-width:1024px){.hero{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:768px){
+  .li-link{min-height:46px!important}
+  .nav-r .cta{min-height:44px!important}
+  .hero-left,.hero-right{width:100%!important;max-width:100%!important}
+}
 </style>
 </head>
 <body>
@@ -983,7 +1264,13 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <!-- ═══ NAV ═══ -->
 <nav>
   <div class="nav-c">
-    <a href="#top" class="brand"><i>●</i> Архитектура сознания <b>· распродажа</b></a>
+    <a href="#top" class="brand"><svg class="brand-mark" viewBox="0 0 40 24" fill="none" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 12C20 4.5 4 4.5 4 12C4 19.5 20 19.5 20 12C20 4.5 36 4.5 36 12C36 19.5 20 19.5 20 12Z" stroke="#E4EBE4" stroke-width="4.6"/>
+        <path d="M20 12C20 4.5 4 4.5 4 12C4 19.5 20 19.5 20 12" stroke="#3B7A5A" stroke-width="2.6"/>
+        <path d="M20 12C20 4.5 36 4.5 36 12C36 19.5 20 19.5 20 12" stroke="#C49A52" stroke-width="2.6"/>
+        <circle r="2.3" fill="#3B7A5A"><animateMotion dur="7s" repeatCount="indefinite" path="M20 12C20 4.5 4 4.5 4 12C4 19.5 20 19.5 20 12C20 4.5 36 4.5 36 12C36 19.5 20 19.5 20 12Z"/></circle>
+        <circle cx="20" cy="12" r="1.5" fill="#111"/>
+      </svg> Архитектура сознания <b>· распродажа</b></a>
     <div class="nav-r">
       <a href="#quiz">Тест</a>
       <a href="#blocks">Круги</a>
@@ -1029,13 +1316,13 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   <div class="hero-left reveal">
     <div class="hero-tag">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-      08.08 · три дня, 8, 9 и 10 августа
+      08.08 · пять дней, с 8 по 12 августа
     </div>
-    <h1><span class="nowrap">Три дня, чтобы</span> <span class="underline">разорвать</span><br><span class="nowrap">свой <span class="sage">круг.</span> <span class="gold">Скидка 40%</span></span></h1>
-    <p class="hero-sub">Восьмое августа, <strong>08.08</strong>. Та же мысль в три ночи, та же сумма на карте к концу месяца, тот же сценарий с людьми: всё это ходит по кругу годами. Мы собрали восемь продуктов проекта в <strong>семь кругов</strong>, и у каждого круга есть выход. Три дня, скидка 40%.</p>
+    <h1><span class="nowrap">Пять дней, чтобы</span> <span class="underline">разорвать</span><br><span class="nowrap">свой <span class="sage">круг.</span> <span class="gold">Скидка 40%</span></span></h1>
+    <p class="hero-sub">Восьмое августа, <strong>08.08</strong>, две восьмёрки в одной дате. Восьмёрка это замкнутая линия: та же мысль в три ночи, та же сумма на карте к концу месяца, тот же разговор, который вы уже вели сто раз. Но в середине линия проходит сама через себя, и там <strong>перекрёсток</strong>: место, где можно сойти. Семь кругов, у каждого свой перекрёсток. Пять дней, скидка 40%.</p>
 
     <div class="hero-stats-bar">
-      <div class="hsb"><b class="sage">3</b><i>Дня</i></div>
+      <div class="hsb"><b class="sage">5</b><i>Дней</i></div>
       <div class="hsb"><b class="text">7</b><i>Кругов</i></div>
       <div class="hsb"><b class="gold">−40<small>%</small></b><i>Скидка</i></div>
     </div>
@@ -1056,41 +1343,48 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <path d="M230 130C193 55 60 60 60 130C60 200 193 205 230 130C267 55 400 60 400 130C400 200 267 205 230 130Z" stroke="#3B7A5A" stroke-width="2" opacity=".35"/>
         <path d="M230 130C193 55 60 60 60 130C60 200 193 205 230 130C267 55 400 60 400 130C400 200 267 205 230 130Z" stroke="#C49A52" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 700" class="e8-run"/>
           <a href="#b1" class="e8n">
-            <circle cx="125" cy="76" r="20" fill="#fff" stroke="#1A9C8E" stroke-width="2.4"/>
-            <text x="125" y="80" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#1A9C8E">01</text>
+            <circle cx="125" cy="76" r="34" fill="transparent"/>
+            <circle cx="125" cy="76" r="23" fill="#fff" stroke="#1A9C8E" stroke-width="2.6"/>
+            <text x="125" y="80" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#1A9C8E">01</text>
           </a>
           <a href="#b2" class="e8n">
-            <circle cx="63" cy="112" r="20" fill="#fff" stroke="#B85C5C" stroke-width="2.4"/>
-            <text x="63" y="116" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#B85C5C">02</text>
+            <circle cx="63" cy="112" r="34" fill="transparent"/>
+            <circle cx="63" cy="112" r="23" fill="#fff" stroke="#B85C5C" stroke-width="2.6"/>
+            <text x="63" y="116" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#B85C5C">02</text>
           </a>
           <a href="#b3" class="e8n">
-            <circle cx="87" cy="174" r="20" fill="#fff" stroke="#3B7A5A" stroke-width="2.4"/>
-            <text x="87" y="178" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#3B7A5A">03</text>
+            <circle cx="87" cy="174" r="34" fill="transparent"/>
+            <circle cx="87" cy="174" r="23" fill="#fff" stroke="#3B7A5A" stroke-width="2.6"/>
+            <text x="87" y="178" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#3B7A5A">03</text>
           </a>
           <a href="#b4" class="e8n">
-            <circle cx="291" cy="81" r="20" fill="#fff" stroke="#C49A52" stroke-width="2.4"/>
-            <text x="291" y="85" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#C49A52">04</text>
+            <circle cx="291" cy="81" r="34" fill="transparent"/>
+            <circle cx="291" cy="81" r="23" fill="#fff" stroke="#C49A52" stroke-width="2.6"/>
+            <text x="291" y="85" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#C49A52">04</text>
           </a>
           <a href="#b5" class="e8n">
-            <circle cx="373" cy="86" r="20" fill="#fff" stroke="#4A7FB5" stroke-width="2.4"/>
-            <text x="373" y="90" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#4A7FB5">05</text>
+            <circle cx="373" cy="86" r="34" fill="transparent"/>
+            <circle cx="373" cy="86" r="23" fill="#fff" stroke="#4A7FB5" stroke-width="2.6"/>
+            <text x="373" y="90" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#4A7FB5">05</text>
           </a>
           <a href="#b6" class="e8n">
-            <circle cx="397" cy="148" r="20" fill="#fff" stroke="#6C5CE7" stroke-width="2.4"/>
-            <text x="397" y="152" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#6C5CE7">06</text>
+            <circle cx="397" cy="148" r="34" fill="transparent"/>
+            <circle cx="397" cy="148" r="23" fill="#fff" stroke="#6C5CE7" stroke-width="2.6"/>
+            <text x="397" y="152" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#6C5CE7">06</text>
           </a>
           <a href="#b7" class="e8n">
-            <circle cx="335" cy="184" r="20" fill="#fff" stroke="#2F6B4F" stroke-width="2.4"/>
-            <text x="335" y="188" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#2F6B4F">07</text>
+            <circle cx="335" cy="184" r="34" fill="transparent"/>
+            <circle cx="335" cy="184" r="23" fill="#fff" stroke="#2F6B4F" stroke-width="2.6"/>
+            <text x="335" y="188" text-anchor="middle" font-family="Inter" font-weight="800" font-size="14" fill="#2F6B4F">07</text>
           </a>
         <circle cx="230" cy="130" r="30" fill="#C49A52"/>
         <circle cx="230" cy="130" r="36" fill="none" stroke="#C49A52" stroke-width="1.4" opacity=".45"/>
         <a href="#flagship" class="e8n">
-          <circle cx="230" cy="130" r="30" fill="#C49A52"/>
+          <circle cx="230" cy="130" r="40" fill="transparent"/><circle cx="230" cy="130" r="30" fill="#C49A52"/>
           <text x="230" y="136" text-anchor="middle" font-family="Inter" font-weight="800" font-size="17" fill="#fff">08</text>
         </a>
       </svg>
-      <div class="e8map-cap">Семь кругов на линии восьмёрки, а в центре восьмой набор: в нём все продукты сразу.</div>
+      <div class="e8map-cap">Семь кругов стоят на линии восьмёрки. В центре, там где линия пересекает саму себя, восьмой набор: в нём все продукты сразу.</div>
       <div class="e8map-legend">
         <a href="#b1" class="e8l">
           <span class="e8l-dot" style="background:#1A9C8E"></span>
@@ -1139,7 +1433,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
 <!-- ═══ TRUST PILLS ═══ -->
 <div class="trust-bar">
-  <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Только 3 дня</div>
+  <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Только 5 дней</div>
   <div class="trust-pill gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>Скидка 40% на все круги</div>
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>Доступ навсегда</div>
   <div class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>8 продуктов проекта</div>
@@ -1167,7 +1461,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <path d="M230 130c34-58 92-84 158-104" stroke="#C49A52" stroke-width="5" stroke-linecap="round"/>
         <path d="M356 8l34 9-9 33" stroke="#C49A52" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="60" cy="130" r="5" fill="#3B7A5A" opacity=".4"/>
-        <circle cx="230" cy="130" r="46" fill="url(#e8dot)"/>
+        <circle cx="230" cy="130" r="46" fill="url(#e8dot)"><animate attributeName="r" values="40;52;40" dur="3.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;.45;.9" dur="3.4s" repeatCount="indefinite"/></circle>
         <circle cx="230" cy="130" r="30" fill="#fff" stroke="#C49A52" stroke-width="2"/>
         <circle cx="230" cy="130" r="36" fill="none" stroke="#C49A52" stroke-width="1" opacity=".4"/>
         <text x="230" y="137" text-anchor="middle" font-family="Inter" font-weight="800" font-size="17" fill="#111" letter-spacing="-0.5">08.08</text>
@@ -1179,18 +1473,20 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         </circle>
         <text x="120" y="228" text-anchor="middle" font-family="Inter" font-weight="800" font-size="11" fill="#3B7A5A" letter-spacing="1.6">ИДЁТ ПО КРУГУ</text>
         <text x="406" y="74" text-anchor="end" font-family="Inter" font-weight="800" font-size="11" fill="#C49A52" letter-spacing="1.6">ВЫХОД</text>
+        <text x="230" y="196" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10.5" fill="#2D5F45" letter-spacing="1.4">ПЕРЕКРЁСТОК</text>
+        <path d="M230 168v18" stroke="#C49A52" stroke-width="1.6" stroke-dasharray="3 3" opacity=".7"/>
       </svg>
     </div>
     <div class="eight-txt">
       <div class="sec-tag">Почему восьмёрка</div>
-      <h2>Круг это то, что <span class="sage">повторяется само собой.</span></h2>
-      <p>Положите восьмёрку на бок, и получится замкнутая линия. По ней удобно ходить годами и называть это характером.</p>
+      <h2>У восьмёрки есть точка, <span class="sage">где можно сойти.</span></h2>
+      <p>Положите восьмёрку на бок, и получится замкнутая линия. По ней удобно ходить годами и называть это характером. Хотя посередине линия пересекает саму себя, и этот перекрёсток и есть выход.</p>
       <ol class="eight-steps">
-        <li><b>Левая петля.</b> То, что возвращается: мысль в три ночи, жалоба тела, одна и та же цифра дохода, знакомый сценарий с людьми.</li>
-        <li><b>Разрыв.</b> Момент, когда виден сам механизм. Дальше линию ведёте вы.</li>
-        <li><b>Правая петля.</b> То, что начинается, когда круг больше не возвращает вас в начало.</li>
+        <li><b>Левая петля.</b> То, что возвращается само: мысль в три ночи, отклик тела, одна и та же цифра дохода, знакомый сценарий с людьми.</li>
+        <li><b>Перекрёсток.</b> Единственная точка, где линия проходит сама через себя. Здесь механизм становится видно, и дальше линию ведёте вы.</li>
+        <li><b>Правая петля.</b> То, что начинается, когда круг больше не возвращает вас в ту же точку.</li>
       </ol>
-      <div class="eight-foot">Ниже семь таких кругов и восьмой набор, где собрано всё. Отметьте в тесте свои, и мы покажем, с чего начать.</div>
+      <div class="eight-foot">Ниже семь таких кругов и восьмой набор, где собрано всё. Никто не обязан выходить сегодня: по кругу можно ходить дальше, там знакомо и предсказуемо. Но если вы ловили себя на мысли «опять то же самое», перекрёсток вам уже виден.</div>
     </div>
   </div>
 </section>
@@ -1325,7 +1621,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>1 790 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>1 790 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 2 690 ₽</span><span>полная 4 480 ₽</span></div>
         </div>
 
         <div class="info-row">
@@ -1333,18 +1633,19 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>Записи навсегда</span>
         </div>
 
+        <div class="includes-head">Что входит: 2 продукта на 4 480 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="6.4"/><circle cx="12" cy="12" r="10.2" opacity=".45"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Протокол остановки ума · 28 дней (2 990 ₽)</span>
+              <span class="li-name"><b>Протокол остановки ума</b><em>28 дней · обычная цена 2 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/protocol" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2v-7.6"/><path d="M12 13.6L5.4 6.4"/><path d="M12 13.6l6.6-7.2"/><circle cx="4.8" cy="4.6" r="2"/><circle cx="19.2" cy="4.6" r="2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Выбор</b><em>запись 90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1380,7 +1681,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>2 390 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>2 390 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 3 580 ₽</span><span>полная 5 970 ₽</span></div>
         </div>
 
         <div class="info-row">
@@ -1388,25 +1693,26 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>3 материала</span>
         </div>
 
+        <div class="includes-head">Что входит: 3 продукта на 5 970 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.6 3.1v5.9c0 4.7-3.2 8.7-7.6 10.1-4.4-1.4-7.6-5.4-7.6-10.1V5.9z"/><path d="M7.8 12.4h2.4l1.3-3 1.9 6 1.3-3h2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">За пределами заболеваний · 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>За пределами заболеваний</b><em>90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/Beyond/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="9.6" rx="6.4" ry="7.2"/><path d="M9.4 6.4c-.9 1.6-.9 3.6 0 5.2" opacity=".6"/><path d="M12 16.8v3.6M8.4 21h7.2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Красота без оправданий · 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Красота без оправданий</b><em>90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/beauty/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="6.4"/><circle cx="12" cy="12" r="10.2" opacity=".45"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Протокол остановки ума · 28 дней (2 990 ₽)</span>
+              <span class="li-name"><b>Протокол остановки ума</b><em>28 дней · обычная цена 2 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/protocol" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1442,7 +1748,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>2 560 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>2 560 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 3 830 ₽</span><span>полная 6 390 ₽</span></div>
         </div>
 
         <div class="info-row">
@@ -1450,18 +1760,19 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>Тетрадь и чат</span>
         </div>
 
+        <div class="includes-head">Что входит: 2 продукта на 6 390 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 8.6h14.8L12 3.2z"/><path d="M8.2 8.6v9.6M15.8 8.6v9.6"/><path d="M5.4 21h13.2"/><path d="M12 12.6v5.6" opacity=".5"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Внутренний Авторитет · 7 дней, 3 встречи (4 900 ₽)</span>
+              <span class="li-name"><b>Внутренний Авторитет</b><em>7 дней, 3 встречи · обычная цена 4 900 ₽</em></span>
               <a href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2v-7.6"/><path d="M12 13.6L5.4 6.4"/><path d="M12 13.6l6.6-7.2"/><circle cx="4.8" cy="4.6" r="2"/><circle cx="19.2" cy="4.6" r="2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Выбор</b><em>запись 90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1497,7 +1808,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>3 160 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>3 160 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 4 730 ₽</span><span>полная 7 890 ₽</span></div>
         </div>
 
         <div class="info-row">
@@ -1505,18 +1820,19 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>Книга 144 страницы внутри</span>
         </div>
 
+        <div class="includes-head">Что входит: 2 продукта на 7 890 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.8" cy="7.6" r="2.6"/><circle cx="17.2" cy="6.6" r="2.6"/><circle cx="12" cy="16.4" r="2.6"/><path d="M8.6 9.6l2.2 4.6M15.6 8.9l-2.1 5.2M9.3 6.9l5.3-.2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Биохимия денег · эфир 3 часа и книга (1 990 ₽)</span>
+              <span class="li-name"><b>Биохимия денег</b><em>эфир 3 часа и книга · обычная цена 1 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/biohimmoney/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="10" width="16.8" height="10.6" rx="2.6"/><path d="M8 10V7.2a4 4 0 0 1 8 0V10"/><path d="M12 13.8v3.2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Код денег · 14-дневный интенсив (5 900 ₽)</span>
+              <span class="li-name"><b>Код денег</b><em>14-дневный интенсив · обычная цена 5 900 ₽</em></span>
               <a href="https://thebodymindcode.github.io/themoneycode/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1552,33 +1868,38 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>3 390 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>3 390 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 5 080 ₽</span><span>полная 8 470 ₽</span></div>
         </div>
 
         <div class="info-row">
-          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 дня + 28 дней + 90 минут</span>
+          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5 дней + 28 дней + 90 минут</span>
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>Записи навсегда</span>
         </div>
 
+        <div class="includes-head">Что входит: 3 продукта на 8 470 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.6v3.4M12 18v3.4M2.6 12H6M18 12h3.4"/><path d="M5.6 5.6l2.4 2.4M16 16l2.4 2.4M18.4 5.6L16 8M8 16l-2.4 2.4" opacity=".7"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Код нового года · 3-дневный интенсив (3 990 ₽)</span>
+              <span class="li-name"><b>Код нового года</b><em>3-дневный интенсив · обычная цена 3 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/NewYearCode/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="6.4"/><circle cx="12" cy="12" r="10.2" opacity=".45"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Протокол остановки ума · 28 дней (2 990 ₽)</span>
+              <span class="li-name"><b>Протокол остановки ума</b><em>28 дней · обычная цена 2 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/protocol" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2v-7.6"/><path d="M12 13.6L5.4 6.4"/><path d="M12 13.6l6.6-7.2"/><circle cx="4.8" cy="4.6" r="2"/><circle cx="19.2" cy="4.6" r="2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Выбор</b><em>запись 90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1614,7 +1935,11 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>3 750 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>3 750 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 5 620 ₽</span><span>полная 9 370 ₽</span></div>
         </div>
 
         <div class="info-row">
@@ -1622,32 +1947,33 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>4 материала</span>
         </div>
 
+        <div class="includes-head">Что входит: 4 продукта на 9 370 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="9.6" rx="6.4" ry="7.2"/><path d="M9.4 6.4c-.9 1.6-.9 3.6 0 5.2" opacity=".6"/><path d="M12 16.8v3.6M8.4 21h7.2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Красота без оправданий · 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Красота без оправданий</b><em>90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/beauty/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.6 3.1v5.9c0 4.7-3.2 8.7-7.6 10.1-4.4-1.4-7.6-5.4-7.6-10.1V5.9z"/><path d="M7.8 12.4h2.4l1.3-3 1.9 6 1.3-3h2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">За пределами заболеваний · 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>За пределами заболеваний</b><em>90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/Beyond/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 8.6h14.8L12 3.2z"/><path d="M8.2 8.6v9.6M15.8 8.6v9.6"/><path d="M5.4 21h13.2"/><path d="M12 12.6v5.6" opacity=".5"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Внутренний Авторитет · 7 дней, 3 встречи (4 900 ₽)</span>
+              <span class="li-name"><b>Внутренний Авторитет</b><em>7 дней, 3 встречи · обычная цена 4 900 ₽</em></span>
               <a href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2v-7.6"/><path d="M12 13.6L5.4 6.4"/><path d="M12 13.6l6.6-7.2"/><circle cx="4.8" cy="4.6" r="2"/><circle cx="19.2" cy="4.6" r="2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Выбор</b><em>запись 90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1683,33 +2009,38 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 
         <div class="save-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          <div class="save-bar-text">Экономия <b>4 150 ₽</b> · скидка <b>40%</b></div>
+          <div class="save-bar-text">Экономия <b>4 150 ₽</b> · скидка&nbsp;<b>40%</b></div>
+        </div>
+        <div class="pricebar" aria-hidden="true">
+          <div class="pb-track"><div class="pb-fill" style="--w:60%"></div></div>
+          <div class="pb-legend"><span>вы платите 6 230 ₽</span><span>полная 10 380 ₽</span></div>
         </div>
 
         <div class="info-row">
-          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 дня + 7 дней + 90 минут</span>
+          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5 дней + 7 дней + 90 минут</span>
           <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>3 материала</span>
         </div>
 
+        <div class="includes-head">Что входит: 3 продукта на 10 380 ₽</div>
         <ul class="includes">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2v-7.6"/><path d="M12 13.6L5.4 6.4"/><path d="M12 13.6l6.6-7.2"/><circle cx="4.8" cy="4.6" r="2"/><circle cx="19.2" cy="4.6" r="2"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Выбор · запись 90 минут (1 490 ₽)</span>
+              <span class="li-name"><b>Выбор</b><em>запись 90 минут · обычная цена 1 490 ₽</em></span>
               <a href="https://thebodymindcode.github.io/choice/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 8.6h14.8L12 3.2z"/><path d="M8.2 8.6v9.6M15.8 8.6v9.6"/><path d="M5.4 21h13.2"/><path d="M12 12.6v5.6" opacity=".5"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Внутренний Авторитет · 7 дней, 3 встречи (4 900 ₽)</span>
+              <span class="li-name"><b>Внутренний Авторитет</b><em>7 дней, 3 встречи · обычная цена 4 900 ₽</em></span>
               <a href="https://thebodymindcode.github.io/authority/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span class="li-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.6v3.4M12 18v3.4M2.6 12H6M18 12h3.4"/><path d="M5.6 5.6l2.4 2.4M16 16l2.4 2.4M18.4 5.6L16 8M8 16l-2.4 2.4" opacity=".7"/></svg></span>
             <div class="li-content">
-              <span class="li-name">Код нового года · 3-дневный интенсив (3 990 ₽)</span>
+              <span class="li-name"><b>Код нового года</b><em>3-дневный интенсив · обычная цена 3 990 ₽</em></span>
               <a href="https://thebodymindcode.github.io/NewYearCode/" target="_blank" rel="noopener" class="li-link">Подробнее о продукте<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </li>
@@ -1739,7 +2070,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <div class="kz-left">
       <div class="kz-badge">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4l3 12h14l3-12-6 5-4-7-4 7-6-5z"/></svg>
-        Восьмой набор · главный за эти три дня
+        Восьмой набор · главный за эти пять дней
       </div>
       <h2>Всё вместе.<br><span>Семь кругов и восемь продуктов.</span></h2>
       <p class="kz-desc">Каждый круг разбирает одну историю. Восьмой набор берёт сразу все: восемь продуктов в одной оплате, ничего не дублируется и не надо решать, с чего начать.</p>
@@ -1922,7 +2253,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       <h2>Протокол денег.<br><span class="sage">Место в новом потоке.</span></h2>
       <a class="pre-link" href="https://thebodymindcode.github.io/moneyaccess/" target="_blank" rel="noopener">Подробнее о продукте
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-      <p><strong>Это отдельная покупка, она не входит ни в один круг.</strong> Поток стартует в сентябре и идёт вживую, одной группой: 17 дней, каждый день новый урок, приложение на телефоне с картой прогресса и дневником состояния, закрытый канал группы. До 10 августа место стоит на 20% дешевле, дальше по обычной цене.</p>
+      <p><strong>Это отдельная покупка, она не входит ни в один круг.</strong> Поток стартует в сентябре и идёт вживую, одной группой: 17 дней, каждый день новый урок, приложение на телефоне с картой прогресса и дневником состояния, закрытый канал группы. До 12 августа место стоит на 20% дешевле, дальше по обычной цене.</p>
     </div>
     <div class="pre-grid">
       <div class="pre-card">
@@ -1964,94 +2295,61 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     <!-- TRANSFORMATIONS BEFORE/AFTER -->
     <div class="brain-info reveal">
       <div class="brain-svg-container">
-        <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 340 296" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="trGradL" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#F3F4EF"/>
-              <stop offset="100%" stop-color="#E0E2D8"/>
+              <stop offset="0%" stop-color="#F6F6F2"/><stop offset="100%" stop-color="#E7E9DF"/>
             </linearGradient>
             <linearGradient id="trGradR" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#E8F0EA"/>
-              <stop offset="100%" stop-color="#C8DCD0"/>
+              <stop offset="0%" stop-color="#EAF3EC"/><stop offset="100%" stop-color="#CFE2D6"/>
             </linearGradient>
           </defs>
 
-          <!-- BEFORE side (left) -->
-          <g>
-            <rect x="20" y="40" width="125" height="200" rx="14" fill="url(#trGradL)" stroke="#999" stroke-width="1"/>
-            <text x="82" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#999" letter-spacing="1.5">ДО</text>
-            <text x="82" y="35" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#aaa">первой программы</text>
-
-            <!-- Chaotic mind icon - tangled lines -->
-            <g transform="translate(82,90)" stroke="#999" stroke-width="1.4" fill="none" stroke-linecap="round">
-              <path d="M-25 -15 Q-15 -25 0 -10 Q 15 5 25 -15"/>
-              <path d="M-25 0 Q-10 -10 5 5 Q 20 15 25 -5"/>
-              <path d="M-25 15 Q-5 5 10 20 Q 20 10 25 15"/>
-              <path d="M-20 25 Q 0 30 20 25"/>
-            </g>
-
-            <!-- Negative bullets -->
-            <g font-family="Inter" font-size="8.5" fill="#666">
-              <circle cx="35" cy="155" r="2" fill="#B85C5C"/>
-              <text x="42" y="158" font-weight="600">тревога фоном</text>
-              <circle cx="35" cy="175" r="2" fill="#B85C5C"/>
-              <text x="42" y="178" font-weight="600">шум в голове</text>
-              <circle cx="35" cy="195" r="2" fill="#B85C5C"/>
-              <text x="42" y="198" font-weight="600">прокрастинация</text>
-              <circle cx="35" cy="215" r="2" fill="#B85C5C"/>
-              <text x="42" y="218" font-weight="600">нет ясности</text>
-            </g>
+          <text x="72" y="18" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#9AA096" letter-spacing="1.6">ДО</text>
+          <text x="72" y="31" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#B3B8AF">первой программы</text>
+          <rect x="8" y="42" width="128" height="212" rx="18" fill="url(#trGradL)" stroke="#DCDED4" stroke-width="1"/>
+          <g transform="translate(72,92)" stroke="#A7ADA3" stroke-width="1.5" fill="none" stroke-linecap="round">
+            <path d="M-26 -14Q-14 -26 0 -10Q14 6 26 -14"/>
+            <path d="M-26 1Q-10 -10 5 6Q20 16 26 -4"/>
+            <path d="M-26 16Q-4 6 11 21Q21 11 26 16"/>
+            <path d="M-20 27Q0 32 20 27" opacity=".6"/>
+          </g>
+          <g font-family="Inter" font-size="9" fill="#7C8279">
+            <circle cx="30" cy="158" r="2.4" fill="#B85C5C"/><text x="40" y="161.5" font-weight="600">тревога фоном</text>
+            <circle cx="30" cy="182" r="2.4" fill="#B85C5C"/><text x="40" y="185.5" font-weight="600">шум в голове</text>
+            <circle cx="30" cy="206" r="2.4" fill="#B85C5C"/><text x="40" y="209.5" font-weight="600">прокрастинация</text>
+            <circle cx="30" cy="230" r="2.4" fill="#B85C5C"/><text x="40" y="233.5" font-weight="600">нет ясности</text>
           </g>
 
-          <!-- ARROW between -->
-          <g transform="translate(160,140)">
-            <circle cx="0" cy="0" r="20" fill="#3B7A5A"/>
-            <path d="M-7 0 L7 0 M2 -5 L7 0 L2 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <text x="0" y="-30" text-anchor="middle" font-family="Inter" font-weight="800" font-size="8" fill="#3B7A5A" letter-spacing="1">28 ДНЕЙ</text>
+          <text x="268" y="18" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#3B7A5A" letter-spacing="1.6">ПОСЛЕ</text>
+          <text x="268" y="31" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#5F8F74">первой программы</text>
+          <rect x="204" y="42" width="128" height="212" rx="18" fill="url(#trGradR)" stroke="#3B7A5A" stroke-width="1.4"/>
+          <g transform="translate(268,92)" fill="none" stroke="#3B7A5A" stroke-linecap="round">
+            <circle cx="0" cy="0" r="6.5" fill="#3B7A5A"/>
+            <circle cx="0" cy="0" r="15" stroke-width="1.5" opacity=".7"/>
+            <circle cx="0" cy="0" r="24" stroke-width="1.2" opacity=".42"/>
+            <circle cx="0" cy="0" r="33" stroke-width="1" opacity=".22"/>
+          </g>
+          <g font-family="Inter" font-size="9" fill="#2D5F45">
+            <path d="M226 157l3 3 6.5-6.5" stroke="#3B7A5A" stroke-width="2" fill="none" stroke-linecap="round"/><text x="242" y="161.5" font-weight="700">ясность с утра</text>
+            <path d="M226 181l3 3 6.5-6.5" stroke="#3B7A5A" stroke-width="2" fill="none" stroke-linecap="round"/><text x="242" y="185.5" font-weight="700">тишина внутри</text>
+            <path d="M226 205l3 3 6.5-6.5" stroke="#3B7A5A" stroke-width="2" fill="none" stroke-linecap="round"/><text x="242" y="209.5" font-weight="700">уверенность</text>
+            <path d="M226 229l3 3 6.5-6.5" stroke="#3B7A5A" stroke-width="2" fill="none" stroke-linecap="round"/><text x="242" y="233.5" font-weight="700">действие</text>
           </g>
 
-          <!-- AFTER side (right) -->
-          <g>
-            <rect x="175" y="40" width="125" height="200" rx="14" fill="url(#trGradR)" stroke="#3B7A5A" stroke-width="1.5"/>
-            <text x="237" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#3B7A5A" letter-spacing="1.5">ПОСЛЕ</text>
-            <text x="237" y="35" text-anchor="middle" font-family="Inter" font-weight="500" font-size="7.5" fill="#3B7A5A">первой программы</text>
-
-            <!-- Calm mind icon - circle/ripples -->
-            <g transform="translate(237,90)" stroke="#3B7A5A" fill="none" stroke-linecap="round">
-              <circle cx="0" cy="0" r="6" fill="#3B7A5A"/>
-              <circle cx="0" cy="0" r="14" stroke-width="1.4" opacity=".7"/>
-              <circle cx="0" cy="0" r="22" stroke-width="1.2" opacity=".4"/>
-              <circle cx="0" cy="0" r="30" stroke-width="1" opacity=".2"/>
-            </g>
-
-            <!-- Positive bullets -->
-            <g font-family="Inter" font-size="8.5" fill="#3B7A5A">
-              <g transform="translate(190,155)">
-                <path d="M0 0 L3 3 L9 -3" stroke="#3B7A5A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              </g>
-              <text x="204" y="158" font-weight="700">ясность с утра</text>
-              <g transform="translate(190,175)">
-                <path d="M0 0 L3 3 L9 -3" stroke="#3B7A5A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              </g>
-              <text x="204" y="178" font-weight="700">тишина внутри</text>
-              <g transform="translate(190,195)">
-                <path d="M0 0 L3 3 L9 -3" stroke="#3B7A5A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              </g>
-              <text x="204" y="198" font-weight="700">уверенность</text>
-              <g transform="translate(190,215)">
-                <path d="M0 0 L3 3 L9 -3" stroke="#3B7A5A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              </g>
-              <text x="204" y="218" font-weight="700">действие</text>
-            </g>
+          <rect x="144" y="128" width="52" height="26" rx="13" fill="#fff" stroke="#3B7A5A" stroke-width="1.4"/>
+          <text x="170" y="145" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#3B7A5A" letter-spacing="0.3">28 дней</text>
+          <g transform="translate(170,170)">
+            <circle cx="0" cy="0" r="11" fill="#3B7A5A"/>
+            <path d="M-4 0h8M1.5 -3.5L5 0L1.5 3.5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
 
-          <!-- Bottom label -->
-          <text x="160" y="270" text-anchor="middle" font-family="Inter" font-weight="600" font-size="9" fill="#999">Так описывают изменения 92% участников</text>
+          <text x="170" y="284" text-anchor="middle" font-family="Inter" font-weight="600" font-size="9" fill="#A3A79E">Так описывают изменения 92% участников</text>
         </svg>
       </div>
 
       <div class="brain-info-text">
-        <h3>Короткая практика утром. <span class="sage">Двадцать восемь дней подряд.</span></h3>
+        <h3>Короткая практика утром. <span class="sage">28 дней подряд.</span></h3>
         <p>Всё держится на расписании: одно и то же действие каждое утро, без рывков. Через 28 дней человек замечает, что внутри стало тише.</p>
         <div class="brain-list">
           <div class="brain-list-item">
@@ -2087,7 +2385,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
         <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.4 20.4v-1.8a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1.8"/><circle cx="9.2" cy="7.4" r="3.6"/><path d="M22 20.4v-1.8a4 4 0 0 0-3-3.86M15.6 3.9a4 4 0 0 1 0 7.5"/></svg></div>
         <div class="r-val">2500<small>+</small></div>
         <div class="r-label"><b>Человек прошли</b><span>программы проекта</span></div>
-        <div class="r-since">с 2016 года</div>
+        
       </div>
       <div class="r-card reveal">
         <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9z"/></svg></div>
@@ -2097,7 +2395,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
       </div>
     </div>
 
-    <p class="r-sources">Цифры из наших опросов участников с <b>2016 по 2026 год</b></p>
+    <p class="r-sources">Цифры из наших опросов участников программ</p>
 
 </section>
 
@@ -2263,7 +2561,7 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
     </div>
 
     <div class="fq">
-      <button class="fq-q">Что будет после 10 августа?
+      <button class="fq-q">Что будет после 12 августа?
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
       <div class="fq-a"><p>С 11 августа цены возвращаются к обычным, а сами круги пропадают: продукты останутся в продаже по отдельности. О следующей распродаже объявим в Telegram-канале проекта.</p></div>
@@ -2325,9 +2623,9 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
 <!-- ═══ FINAL CTA — минимализм ═══ -->
 <section class="final-cta">
   <div class="fc-content">
-    <div class="fc-tag">Закрываемся 10 августа в 23:59</div>
-    <h2>Три дня. <span>Восемь продуктов.</span></h2>
-    <p>Восьмёрка замкнута сама на себя, и ходить по ней можно годами. 8 августа мы открываем весь проект на три дня, чтобы этот круг было чем разорвать. Закрываемся 10 августа в 23:59.</p>
+    <div class="fc-tag">Закрываемся 12 августа в 23:59</div>
+    <h2>Пять дней. <span>Восемь продуктов.</span></h2>
+    <p>Восьмёрка замкнута сама на себя, и ходить по ней можно годами. Мы просто открыли дверь на пять дней и показали, где у каждого круга перекрёсток. Выходить или нет, решаете вы. Закрываемся 12 августа в 23:59.</p>
     <div class="fc-buttons">
       <a href="#quiz" class="fc-btn-primary">Найти свой круг
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -2337,17 +2635,47 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="ft-links">
-    <a href="https://t.me/TheBodyMindCode_support" target="_blank">Поддержка</a>
-    <a href="https://instagram.com/thebodymindcode" target="_blank">Instagram</a>
-    <a href="#blocks">Круги</a>
-    <a href="#vip">Личная работа</a>
-    <a href="#faq">Вопросы</a>
+<!-- ═══ БАННЕР ПОРТАЛА ═══ -->
+<div class="portal-wrap">
+  <a class="portal" href="https://thebodymindcode.github.io/soznanie/" target="_blank" rel="noopener">
+    <div class="portal-tag">Часть большого портала</div>
+    <div class="portal-name">Архитектура сознания</div>
+    <p class="portal-desc">Все программы, статьи и практики в одном месте. Один вход, доступ ко всему.</p>
+    <span class="portal-btn">Открыть портал
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </a>
+</div>
+
+<div class="mbar" id="mbar" hidden>
+  <div class="mbar-txt">
+    <b>Круги от 2 690 ₽</b>
+    <span>Скидка 40%, до 12 августа</span>
   </div>
-  <p class="ft-copy">© 2026 Архитектура сознания. ИП Ростовцева Дарья Валерьевна · ИНН: 241103415641<br><span style="opacity:.55;font-size:.78rem">сборка 06.08.2026, 20:05</span></p>
+  <a class="mbar-btn" href="#blocks">Выбрать круг</a>
+</div>
+
+<!-- ═══ ПОДВАЛ ═══ -->
+<footer class="ft">
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-name">Архитектура сознания</div>
+        <div class="ft-slogan">Мозг · тело · достаток</div>
+      </div>
+      <div class="ft-soc-row">
+        <a class="ft-tg" href="https://t.me/+oSuGhJQlsr4zYmQy" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.3 4.3 2.9 11.4c-1 .38-.98 1.78.03 2.13l4.55 1.56 1.76 5.4c.28.85 1.37 1.03 1.9.28l2.5-3.55 4.55 3.36c.7.52 1.7.13 1.87-.72L22.9 5.7c.2-1-.68-1.82-1.6-1.4Z"/></svg> Телеграм</a>
+        <a href="https://instagram.com/thebodymindcode" target="_blank" rel="noopener" aria-label="Instagram" class="ft-soc"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5.4" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></svg></a><a href="https://www.youtube.com/@thebodymindcode" target="_blank" rel="noopener" aria-label="YouTube" class="ft-soc"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><rect x="2.4" y="5" width="19.2" height="14" rx="4.4" stroke="currentColor" stroke-width="1.7"/><path d="M10.2 9.2l5 2.8-5 2.8z" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@thebodymindcode" target="_blank" rel="noopener" aria-label="TikTok" class="ft-soc"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M13.7 3.2v9.9a3.6 3.6 0 1 1-3.05-3.56" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.7 5.6c.85 1.9 2.55 3.15 4.75 3.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.threads.com/@daryarostovtseva" target="_blank" rel="noopener" aria-label="Threads" class="ft-soc"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M17.6 11.4c-.13-.06-.27-.12-.4-.17-.24-4.35-2.6-6.84-6.58-6.86-2.4-.02-4.4 1-5.63 2.86l1.78 1.22c.9-1.37 2.32-1.66 3.4-1.66h.03c1.36 0 2.38.4 3.05 1.18.48.57.8 1.35.96 2.34-1.2-.2-2.5-.26-3.9-.18-3.9.22-6.4 2.5-6.24 5.66.09 1.6.88 2.98 2.24 3.87 1.15.76 2.63 1.13 4.17 1.05 2.03-.11 3.63-.89 4.74-2.3.84-1.08 1.37-2.48 1.6-4.24.96.58 1.67 1.34 2.06 2.26.66 1.56.7 4.12-1.39 6.2l1.65 1.53c1.42-1.42 2.94-3.86 2.16-7.06-.55-2.24-2.03-3.68-3.93-4.63Zm-5.24 6.9c-1.7.1-3.47-.67-3.56-2.32-.06-1.22.87-2.58 3.67-2.74.32-.02.64-.03.94-.03.94 0 1.82.09 2.62.27-.3 3.73-2.05 4.46-3.67 4.55Z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026. Все права защищены. ИП Ростовцева Дарья Валерьевна · ИНН 241103415641</span>
+      <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">Поддержка · @TheBodyMindCode_support</a>
+    </div>
+    <div class="ft-build">сборка 07.08.2026, 07:56</div>
+  </div>
 </footer>
+
 
 <script>
 /* ═══════════════════════════════════════════════════════════
@@ -2356,18 +2684,19 @@ footer{border-top:1px solid var(--border);padding:32px;text-align:center;backgro
    страницы висит красная плашка со списком незаполненных.
    ═══════════════════════════════════════════════════════════ */
 const PAY = {
-  b1:     '',   /* Круг 01 · Шум           · 2 690 ₽ */
-  b2:     '',   /* Круг 02 · Тело          · 3 580 ₽ */
-  b3:     '',   /* Круг 03 · Разрешение    · 3 830 ₽ */
-  b4:     '',   /* Круг 04 · Потолок       · 4 730 ₽ */
-  b5:     '',   /* Круг 05 · Январь        · 5 080 ₽ */
-  b6:     '',   /* Круг 06 · Сценарий      · 5 620 ₽ */
-  flag:   '',   /* Набор «Всё вместе»      · 14 540 ₽ */
-  ses:    '',   /* Сессия с Дарьей         · 10 500 ₽, 3 места */
-  mkey:   '',   /* Деньги под ключ         · 13 900 ₽, 3 места */
-  allkey: '',   /* Всё под ключ            · 23 900 ₽, 2 места */
-  pre1:   '',   /* Протокол денег · Доступ · 2 800 ₽ */
-  pre2:   ''    /* Протокол денег · Полный · 7 900 ₽ */
+  b1:     'https://payform.ru/ltcdv4e/',   /* Круг 01 · Шум           · 2 690 ₽ */
+  b2:     'https://payform.ru/mjcdv4B/',   /* Круг 02 · Тело          · 3 580 ₽ */
+  b3:     'https://payform.ru/mlcdv4D/',   /* Круг 03 · Разрешение    · 3 830 ₽ */
+  b4:     'https://payform.ru/mqcdv4I/',   /* Круг 04 · Потолок       · 4 730 ₽ */
+  b5:     'https://payform.ru/nbcdv50/',   /* Круг 05 · Январь        · 5 080 ₽ */
+  b6:     'https://payform.ru/nhcdv56/',   /* Круг 06 · Сценарий      · 5 620 ₽ */
+  b7:     'https://payform.ru/nvcdv5k/',   /* Круг 07 · Откладывание  · 6 230 ₽ */
+  flag:   'https://payform.ru/o5cdv5r/',   /* Набор «Всё вместе»      · 14 540 ₽ */
+  ses:    'https://payform.ru/kacdvjw/',   /* Сессия с Дарьей         · 10 500 ₽, 3 места */
+  mkey:   'https://payform.ru/oecdv5A/',   /* Деньги под ключ         · 13 900 ₽, 3 места */
+  allkey: 'https://payform.ru/okcdv5G/',   /* Всё под ключ            · 23 900 ₽, 2 места */
+  pre1:   'https://payform.ru/kgcdvjC/',   /* Протокол денег · Доступ · 2 800 ₽ */
+  pre2:   'https://payform.ru/klcdvjH/'    /* Протокол денег · Полный · 7 900 ₽ */
 };
 const SUPPORT = 'https://t.me/TheBodyMindCode_support';
 (function(){
@@ -2463,6 +2792,18 @@ const plural = (n, a, b, c) => {
 const obs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
+/* липкая панель покупки на телефоне */
+(function(){
+  const bar=document.getElementById('mbar'); if(!bar) return;
+  const hero=document.querySelector('.hero-wrap'), foot=document.querySelector('.ft');
+  let pastHero=false, atFoot=false;
+  const upd=()=>{ bar.hidden = !(pastHero && !atFoot); };
+  new IntersectionObserver(e=>{ pastHero = !e[0].isIntersecting; upd(); }, {threshold:0}).observe(hero);
+  new IntersectionObserver(e=>{ atFoot = e[0].isIntersecting; upd(); }, {threshold:0}).observe(foot);
+})();
+
+
+
 // Results bars animation
 const barObs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');barObs.unobserve(e.target)}})},{threshold:.3});
 document.querySelectorAll('.r-card').forEach(el=>barObs.observe(el));
@@ -2484,8 +2825,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   })
 });
 
-// Countdown: до 10 августа 2026, 23:59:59
-const targetDate = new Date('2026-08-10T23:59:59').getTime();
+// Countdown: до 12 августа 2026, 23:59:59
+const targetDate = new Date('2026-08-12T23:59:59').getTime();
 function updateCountdown(){
   const now = Date.now();
   const diff = targetDate - now;
